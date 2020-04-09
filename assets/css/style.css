@@ -2586,7 +2586,7 @@ input:focus::-moz-placeholder {
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
   /* line 715, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
   .padding-bottom {
-    padding-bottom: 250px;
+    padding-bottom: 50px;
   }
 }
 
@@ -2703,8 +2703,8 @@ input:focus::-moz-placeholder {
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
   /* line 778, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
   .section-padding30 {
-    padding-top: 200px;
-    padding-bottom: 170px;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 }
 
@@ -2881,8 +2881,8 @@ input:focus::-moz-placeholder {
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
   /* line 876, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_common.scss */
   .footer-padding {
-    padding-top: 150px;
-    padding-bottom: 120px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
 
