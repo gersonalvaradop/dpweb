@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="es">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -30,7 +30,7 @@
 
 <body>
 
-<a href="index.html" class="btn btn-primary float-right" title="">Regresar</a>
+<a href="index.php" class="btn btn-primary float-right" title="">Regresar</a>
 	<div class="container">
 		<div class="row align-items-center">
 

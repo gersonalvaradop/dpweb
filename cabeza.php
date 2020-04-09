@@ -1,5 +1,5 @@
 <!doctype html>
-<html  lang="es">
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
 </head>
 
 <body>
@@ -37,7 +39,6 @@
         </div>
     </div>
     <!-- Preloader Start -->
-
 
     <header>
         <!-- Header Start -->
@@ -58,8 +59,8 @@
                         <div class="main-menu f-right d-none d-lg-block">
                             <nav>                                                
                                 <ul id="navigation">                                                                                                                                     
-                                    <li><a href="index.html">Inicio</a></li>
-                                    <li><a href="login.html">Login</a></li>
+                                    <li><a href="index.php">Inicio</a></li>
+                                    <li><a href="login.php">Login</a></li>
                                     <li><a href="#">Asignaciones Anteriores</a>
                                         <ul class="submenu">
                                          <li><a href="historia.html">Historia del sitio</a> </li>
@@ -73,9 +74,9 @@
 
                                      </ul>
                                  </li>
-                                 <li><a href="registro.html">Registro</a></li>
+                                 <li><a href="registro.php">Registro</a></li>
                                
-                                <li><a href="contact.html">Contacto</a></li>
+                                <li><a href="contact.php">Contacto</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -115,175 +116,4 @@
 <!-- Header End -->
 </header>
 
-
-
-
-
-
-
-
-
-
-<style>
-	* {box-sizing: border-box}
-
-/* Add padding to containers */
-.container {
-  padding: 16px;
-}
-
-/* Full-width input fields */
-input[type=text], input[type=email], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-/* Overwrite default styles of hr */
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-
-/* Set a style for the submit/register button */
-.registerbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-.registerbtn:hover {
-  opacity:1;
-}
-
-/* Add a blue text color to links */
-a {
-  color: dodgerblue;
-}
-
-/* Set a grey background color and center the text of the "sign in" section */
-.signin {
-  background-color: #f1f1f1;
-  text-align: center;
-}
-</style>
-
-
-
-
-
 <main>
-
-   <div class="container">
-   	
-   	<form action="registro.html">
-  <div class="container">
-    <h1>Registro</h1>
-    <p>Llene el siguiente formulario.</p>
-    <hr>
-
-    <label for="email"><b>Email</b></label>
-    <input type="email" placeholder="Ingrese Email" name="email" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Ingrese Password" name="psw" required>
-
-    <label for="psw-repeat"><b>Repita Password</b></label>
-    <input type="password" placeholder="Repita Password" name="psw-repeat" required>
-    <hr>
-
-    <p>Esta de acuerdo con nuestras <a href="#">Politicas de privacidad</a>.</p>
-    <button type="submit" class="registerbtn">Registrarme</button>
-  </div>
-
-  <div class="container signin">
-    <p>Ya tengo cuenta <a href="login.html">Login</a>.</p>
-  </div>
-</form>
-
-
-
-   </div>
-
-
-</main>
-<footer>
-
- <!-- Footer Start-->
- <div class="footer-area footer-padding">
-     <div class="container">
-
-         <!-- Footer bottom -->
-         <div class="row">
-            <div class="col-xl-7 col-lg-7 col-md-7">
-                <div class="footer-copy-right">
-                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                      Sitio creado para Diseño de páginas Web - Docente. Ing. Tomás Urbina
-                      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>                   </div>
-                  </div>
-                  <div class="col-xl-5 col-lg-5 col-md-5">
-                    <div class="footer-copy-right f-right">
-                        <!-- social -->
-                        <div class="footer-social">
-                         Grupo tema: Jardineria
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </div>
- </div>
- <!-- Footer End-->
-
-</footer>
-
-<!-- JS here -->
-
-<!-- All JS Custom Plugins Link Here here -->
-<script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
-<!-- Jquery, Popper, Bootstrap -->
-<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-<script src="./assets/js/popper.min.js"></script>
-<script src="./assets/js/bootstrap.min.js"></script>
-<!-- Jquery Mobile Menu -->
-<script src="./assets/js/jquery.slicknav.min.js"></script>
-
-<!-- Jquery Slick , Owl-Carousel Plugins -->
-<script src="./assets/js/owl.carousel.min.js"></script>
-<script src="./assets/js/slick.min.js"></script>
-
-<!-- One Page, Animated-HeadLin -->
-<script src="./assets/js/wow.min.js"></script>
-<script src="./assets/js/animated.headline.js"></script>
-<script src="./assets/js/jquery.magnific-popup.js"></script>
-
-<!-- Scrollup, nice-select, sticky -->
-<script src="./assets/js/jquery.scrollUp.min.js"></script>
-<script src="./assets/js/jquery.nice-select.min.js"></script>
-<script src="./assets/js/jquery.sticky.js"></script>
-
-<!-- contact js -->
-<script src="./assets/js/contact.js"></script>
-<script src="./assets/js/jquery.form.js"></script>
-<script src="./assets/js/jquery.validate.min.js"></script>
-<script src="./assets/js/mail-script.js"></script>
-<script src="./assets/js/jquery.ajaxchimp.min.js"></script>
-
-<!-- Jquery Plugins, main Jquery -->    
-<script src="./assets/js/plugins.js"></script>
-<script src="./assets/js/main.js"></script>
-
-</body>
-</html>
