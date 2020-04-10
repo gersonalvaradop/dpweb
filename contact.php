@@ -3,7 +3,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-        <h2 class="contact-title">Contactenos</h2>
+        <h2 class="contact-title">ronald</h2>
         </div>
         <div class="col-lg-8">
         <form class="form-contact contact_form" id="contactForm" action="contact_process.php" method="post" novalidate="novalidate">
