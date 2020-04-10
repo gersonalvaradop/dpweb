@@ -53,7 +53,7 @@
                             <!-- Logo -->
                             <div class="col-xl-1 col-lg-1 col-md-1 col-sm-3">
                                 <div class="logo">
-                                  <a href="index.php"><img src="assets/img/logo/logo.png" alt="" width="141" height="64"></a>
+                                  <a href="index.php"><img src="assets/img/logo/logo.png" alt="" width="121" height="64"></a>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-8 col-md-7 col-sm-5">
