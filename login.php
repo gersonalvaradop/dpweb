@@ -21,7 +21,9 @@
 	<link rel="stylesheet" href="assets/css/slick.css">
 	<link rel="stylesheet" href="assets/css/nice-select.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/sweetalert2.min.css">
 	<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+	<script src="./assets/js/sweetalert2.all.min.js"></script>
 	<style>
 		body{
 			background-color: hsla(89, 100%, 50%, 0.1);
@@ -31,7 +33,7 @@
 
 <body>
 
-<a href="index.php" class="btn btn-primary float-right" title="">Regresar</a>
+	<a href="index.php" class="btn btn-primary float-right" title="">Regresar</a>
 	<div class="container">
 		<div class="row align-items-center">
 
@@ -69,33 +71,74 @@
 	</div>
 
 
-<script>
-	
-$('#formulario').submit(function(event) {
-	event.preventDefault();
+	<script>
 
-	$.ajax({
-		url: 'peticiones.php',
-		type: 'POST',
-		dataType: 'json',
-		data: {login_peticion: '$sdf546', usuario:$('#usuario').val(), password:$('#password').val(),},
-	})
-	.done(function(data) {
-		console.log(data);
-	})
-	.fail(function() {
-		console.log("error");
-	})
-	.always(function() {
-		console.log("complete");
-	});
-	
+		$('#formulario').submit(function(event) {
+			event.preventDefault();
+
+			$.ajax({
+				url: 'peticiones.php',
+				type: 'POST',
+				dataType: 'json',
+				data: {login_peticion: '$sdf546', usuario:$('#usuario').val(), password:$('#password').val(),},
+			})
+			.done(function(data) {
+				if (data.exito==1) {
+					let timerInterval
+					Swal.fire({
+						title: 'Bienvenido '+data.nombre,
+						html: 'Entrando siendo redirigido',
+						timer: 2000,
+						timerProgressBar: true,
+						onBeforeOpen: () => {
+							Swal.showLoading()
+							timerInterval = setInterval(() => {
+								const content = Swal.getContent()
+								if (content) {
+									const b = content.querySelector('b')
+									if (b) {
+										b.textContent = Swal.getTimerLeft()
+									}
+								}
+							}, 100)
+						},
+						onClose: () => {
+							clearInterval(timerInterval)
+						}
+					}).then((result) => {
+						/* Read more about handling dismissals below */
+						if (result.dismiss === Swal.DismissReason.timer) {
+							location.href = data.redireccion;
+						}
+					})
+
+				}else{
+					Swal.fire(
+						'Mensaje',
+						data.mensaje,
+						'question'
+						);
+				}
+				
+			})
+			.fail(function() {
+				Swal.fire({
+					icon: 'error',
+					title: 'Problemas',
+					text: 'No se pudo realizar la petición',
+					footer: 'Verifique la conexion a datos'
+				});
+			})
+			.always(function() {
+				console.log("complete");
+			});
 
 
-});
+
+		});
 
 
-</script>
+	</script>
 
 
 	<!-- JS here -->

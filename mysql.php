@@ -7,7 +7,7 @@ class Conexion{
 	function __construct() {
 		$this->mysqli = new mysqli("127.0.0.1", "root", "", "jardineria", 3306);
 		if ($this->mysqli->connect_errno) {
-			echo "Fallo al conectar a MySQL: (" . $this->mysqli->connect_errno . ") " . $this->mysqli->connect_error;
+			echo json_encode(array("exito"=>0, "mensaje"=>"Fallo al conectar a MySQL: (" . $this->mysqli->connect_errno . ") " . $this->mysqli->connect_error));
 		}
 	}
 
