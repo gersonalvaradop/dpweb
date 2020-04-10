@@ -20,10 +20,6 @@ $(document).ready(function(){
                     required: true,
                     minlength: 4
                 },
-                number: {
-                    required: true,
-                    minlength: 5
-                },
                 email: {
                     required: true,
                     email: true
@@ -39,15 +35,11 @@ $(document).ready(function(){
                     minlength: "Ingrese por lo menos 2 caracteres"
                 },
                 subject: {
-                    required: "Ingrese el mensaje",
+                    required: "Ingrese el asunto",
                     minlength: "Ingrese por lo menos 4 caracteres"
                 },
-                number: {
-                    required: "Ingrese su numero de contacto",
-                    minlength: "minimo 5 caracteres"
-                },
                 email: {
-                    required: "Ingrese su correo"
+                    required: "Ingrese su correo o un correo valido"
                 },
                 message: {
                     required: "Agrege el mensaje",

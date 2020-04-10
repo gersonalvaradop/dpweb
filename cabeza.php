@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!-- JS here -->
     <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
 </head>
 
@@ -38,78 +39,75 @@
             </div>
         </div>
     </div>
-    <!-- Preloader Start -->
+    <!-- Preloader End -->
 
     <header>
         <!-- Header Start -->
         <div class="header-area">
             <div class="main-header ">
 
-             <div class="header-bottom  header-sticky">
-                <div class="container-fluid">
-                    <div class="row align-items-center">
-                        <!-- Logo -->
-                        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-3">
-                            <div class="logo">
-                              <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
-                          </div>
-                      </div>
-                      <div class="col-xl-6 col-lg-8 col-md-7 col-sm-5">
-                        <!-- Main-menu -->
-                        <div class="main-menu f-right d-none d-lg-block">
-                            <nav>                                                
-                                <ul id="navigation">                                                                                                                                     
-                                    <li><a href="index.php">Inicio</a></li>
-                                    <li><a href="login.php">Login</a></li>
-                                    <li><a href="#">Asignaciones Anteriores</a>
-                                        <ul class="submenu">
-                                         <li><a href="historia.html">Historia del sitio</a> </li>
-                                         <li><a href="plataformas.html">Plataformas Web</a> </li>
-                                         <li><a href="maquetacion.html">Maquetación Web</a> </li>
-                                         <li><a href="servidores.html">Servidores Web</a> </li>
-                                         <li><a href="internet.html">Internet de las cosas</a> </li>
-                                         <li><a href="info.html">Informacion del grupo</a> </li>
-                                         <li><a href="glosario.html">Glosario</a> </li>
-
-
-                                     </ul>
-                                 </li>
-                                 <li><a href="registro.php">Registro</a></li>
-                               
-                                <li><a href="contact.php">Contacto</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div> 
-                <div class="col-xl-5 col-lg-3 col-md-3 col-sm-3 fix-card">
-                    <ul class="header-right f-right d-none d-lg-block d-flex justify-content-between">
-                        <li class="d-none d-xl-block">
-                            <div class="form-box f-right ">
-                                <input type="text" name="Search" placeholder="¿Buscas algo?">
-                                <div class="search-icon">
-                                    <i class="fas fa-search special-tag"></i>
+                <div class="header-bottom  header-sticky">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-3">
+                                <div class="logo">
+                                  <a href="index.php"><img src="assets/img/logo/logo.png" alt=""></a>
                                 </div>
                             </div>
-                        </li>
-                        
-                        <li>
-                            <div class="shopping-card">
-                                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                            <div class="col-xl-6 col-lg-8 col-md-7 col-sm-5">
+                                <!-- Main-menu -->
+                                <div class="main-menu f-right d-none d-lg-block">
+                                    <nav>                                                
+                                        <ul id="navigation">                          
+                                            <li><a href="index.php">Inicio</a></li>
+                                            <li><a href="registro.php">Registro</a></li>
+                                            <li><a href="productos.php">Productos</a></li>
+                                            <li><a href="encuesta.php">Encuesta</a></li>
+                                            <li><a href="contact.php">Contacto</a></li>
+                                            <li><a href="#">Asignaciones Anteriores</a>
+                                                <ul class="submenu">
+                                                     <li><a href="oldproyect/historia.html">Historia del sitio</a> </li>
+                                                     <li><a href="oldproyect/plataformas.html">Plataformas Web</a> </li>
+                                                     <li><a href="oldproyect/maquetacion.html">Maquetación Web</a> </li>
+                                                     <li><a href="oldproyect/servidores.html">Servidores Web</a> </li>
+                                                     <li><a href="oldproyect/internet.html">Internet de las cosas</a> </li>
+                                                     <li><a href="oldproyect/info.html">Informacion del grupo</a> </li>
+                                                     <li><a href="oldproyect/glosario.html">Glosario</a> </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div> 
+                            <div class="col-xl-5 col-lg-3 col-md-3 col-sm-3 fix-card">
+                                <ul class="header-right f-right d-none d-lg-block d-flex justify-content-between">
+                                    <li class="d-none d-xl-block">
+                                        <div class="form-box f-right ">
+                                            <input type="text" name="Search" placeholder="¿Buscas algo?">
+                                            <div class="search-icon">
+                                                <i class="fas fa-search special-tag"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="shopping-card">
+                                            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="d-none d-lg-block"> <a href="login.php" class="btn header-btn">Login</a></li>
+                                </ul>
                             </div>
-                        </li>
-                        <li class="d-none d-lg-block"> <a href="login.html" class="btn header-btn">Entrar</a></li>
-                    </ul>
-                </div>
-                <!-- Mobile Menu -->
-                <div class="col-12">
-                    <div class="mobile_menu d-block d-lg-none"></div>
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-</div>
-<!-- Header End -->
-</header>
+    </header>
+    <!-- Header End -->
 
 <main>

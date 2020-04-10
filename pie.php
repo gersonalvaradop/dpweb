@@ -1,33 +1,30 @@
-
-
 </main>
+
 <footer>
-
- <!-- Footer Start-->
- <div class="footer-area footer-padding">
-     <div class="container">
-
-         <!-- Footer bottom -->
-         <div class="row">
-            <div class="col-xl-7 col-lg-7 col-md-7">
-                <div class="footer-copy-right">
-                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                      Sitio creado para Diseño de páginas Web - Docente. Ing. Tomás Urbina
-                      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>                   </div>
-                  </div>
-                  <div class="col-xl-5 col-lg-5 col-md-5">
+    <!-- Footer Start-->
+    <div class="footer-area footer-padding">
+        <div class="container">
+            <!-- Footer bottom -->
+            <div class="row">
+                <div class="col-xl-7 col-lg-7 col-md-7">
+                    <div class="footer-copy-right">
+                        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                          Sitio creado para Diseño de páginas Web - Docente. Ing. Tomás Urbina
+                          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>  
+                    </div>
+                </div>
+                <div class="col-xl-5 col-lg-5 col-md-5">
                     <div class="footer-copy-right f-right">
                         <!-- social -->
                         <div class="footer-social">
-                         Grupo tema: Jardineria
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </div>
- </div>
- <!-- Footer End-->
-
+                            Grupo tema: Jardineria
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End-->
 </footer>
 
 <!-- JS here -->

@@ -2,9 +2,8 @@
 <div class="container">
 
 
-	Ronald Arce
+	Yamir Novoski
 
 
 </div> 
 <?php include 'pie.php'; ?>
-
