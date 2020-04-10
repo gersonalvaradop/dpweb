@@ -58,7 +58,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-tittle text-center mb-10">
-                        <h2>Bienvenido</h2>
+                        <h2>Bienvenidos</h2>
                         <hr>
                     </div>
                 </div>
