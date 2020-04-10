@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 
     <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -52,7 +52,7 @@
                             <!-- Logo -->
                             <div class="col-xl-1 col-lg-1 col-md-1 col-sm-3">
                                 <div class="logo">
-                                  <a href="index.php"><img src="assets/img/logo/logon.png" alt=""></a>
+                                  <a href="admin.php"><img src="assets/img/logo/logon.png" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-8 col-md-7 col-sm-5">
@@ -61,10 +61,19 @@
                                     <nav>                                                
                                         <ul id="navigation">                          
                                             <li><a href="index.php">Inicio</a></li>
-                                            <li><a href="productos.php">Productos</a></li>
+                                            <li><a href="#">Admin</a>
+                                            <ul class="submenu">
+                                                     <li><a href="#">Insertar productos</a> </li>
+                                                     <li><a href="#">Listado de clientes</a>
+                                                     <li><a href="#">Listado de Productos</a>
+                                                     <li><a href="#">Listado de encuestas</a>
+                                                     <li><a href="#">Listado de contactos</a>
+                                                    </li>                                                     
+                                                </ul>
+                                            </li>
+                                            <li><a href="productos.php"> Productos</a></li>
                                             <li><a href="encuesta.php">Encuesta</a></li>
-                                            <li><a href="contact.php">Contacto</a></li>
-                                            <li><a href="#">Asignaciones Anteriores</a>
+                                            <li><a href="#">Menús Antiguos</a>
                                                 <ul class="submenu">
                                                      <li><a href="oldproyect/historia.html">Historia del sitio</a> </li>
                                                      <li><a href="oldproyect/plataformas.html">Plataformas Web</a> </li>
@@ -82,21 +91,12 @@
                             <div class="col-xl-5 col-lg-3 col-md-3 col-sm-3 fix-card">
                                 <ul class="header-right f-right d-none d-lg-block d-flex justify-content-between">
                                     <li class="d-none d-xl-block">
-                                        <div class="form-box f-right ">
-                                            <input type="text" name="Search" placeholder="¿Buscas algo?">
-                                            <div class="search-icon">
-                                                <i class="fas fa-search special-tag"></i>
-                                            </div>
-                                        </div>
+                                        
                                     </li>
                                     <li>
-                                        <div class="shopping-card">
-                                        <a href="#"><i class="fas fa-shopping-cart"></i></a>
-                                        </div>
+                                       
                                     </li>
-                                    <li class="d-none d-lg-block"> <a href="login.php" class="btn header-btn">Login</a></li>
-                                     <li class="d-none d-lg-block"> <a href="registro.php" class="btn header-btn">Registrate</a></li
-                                    
+                                    <li class="d-none d-lg-block"> <a href="login.php" class="btn header-btn">Log Out</a></li>                                                      
                                 </ul>
                             </div>
                             <!-- Mobile Menu -->
