@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="assets/css/slick.css">
 	<link rel="stylesheet" href="assets/css/nice-select.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+	<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
 	<style>
 		body{
 			background-color: hsla(89, 100%, 50%, 0.1);
@@ -43,9 +44,9 @@
 						<br>
 						<h3>Area de registro <br>
 						Ingresa tus datos</h3>
-						<form class="row contact_form" action="#" method="post" >
+						<form id="formulario" class="row contact_form" action="#" method="post" >
 							<div class="col-md-12 form-group p_star">
-								<input required="" type="text" class="form-control" id="name" name="name" value="" placeholder="Usuario">
+								<input required="" type="text" class="form-control" id="usuario" name="usuario" value="" placeholder="Usuario">
 							</div>
 							<div class="col-md-12 form-group p_star">
 								<input required="" type="password" class="form-control" id="password" name="password" value="" placeholder="Password">
@@ -68,7 +69,33 @@
 	</div>
 
 
+<script>
+	
+$('#formulario').submit(function(event) {
+	event.preventDefault();
 
+	$.ajax({
+		url: 'peticiones.php',
+		type: 'POST',
+		dataType: 'json',
+		data: {login_peticion: '$sdf546', usuario:$('#usuario').val(), password:$('#password').val(),},
+	})
+	.done(function(data) {
+		console.log(data);
+	})
+	.fail(function() {
+		console.log("error");
+	})
+	.always(function() {
+		console.log("complete");
+	});
+	
+
+
+});
+
+
+</script>
 
 
 	<!-- JS here -->
@@ -76,7 +103,6 @@
 	<!-- All JS Custom Plugins Link Here here -->
 	<script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
 	<!-- Jquery, Popper, Bootstrap -->
-	<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
 	<script src="./assets/js/popper.min.js"></script>
 	<script src="./assets/js/bootstrap.min.js"></script>
 	<!-- Jquery Mobile Menu -->

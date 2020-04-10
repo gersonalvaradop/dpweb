@@ -1,48 +1,50 @@
-<?php include ('cabeza.php') ?>
+<?php 
+include 'mysql.php';
+include 'cabeza.php';
+?>
 
-    <!-- slider Area Start -->
-    <div class="slider-area ">
-        <!-- Mobile Menu -->
-        <div class="slider-active">
-            <div class="single-slider slider-height" data-background="assets/img/hero/h1_hero.jpg">
-                <div class="container">
-                    <div class="row d-flex align-items-center justify-content-between">
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-none d-md-block">
-                            <div class="hero__img" data-animation="bounceIn" data-delay=".4s">
-                                <img src="assets/img/hero/hero_man.png" alt="">
-                            </div>
+<!-- slider Area Start -->
+<div class="slider-area ">
+    <!-- Mobile Menu -->
+    <div class="slider-active">
+        <div class="single-slider slider-height" data-background="assets/img/hero/h1_hero.jpg">
+            <div class="container">
+                <div class="row d-flex align-items-center justify-content-between">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-none d-md-block">
+                        <div class="hero__img" data-animation="bounceIn" data-delay=".4s">
+                            <img src="assets/img/hero/hero_man.png" alt="">
                         </div>
-                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-8">
-                            <div class="hero__caption">
-                                <span data-animation="fadeInRight" data-delay=".4s">60% De descuento </span>
-                                <h1 data-animation="fadeInRight" data-delay=".6s">El verano <br> Está acá</h1>
-                                <p data-animation="fadeInRight" data-delay=".8s">Colección de verano</p>
-                                <!-- Hero-btn -->
-                                <div class="hero__btn" data-animation="fadeInRight" data-delay="1s">
-                                    <a href="#" class="btn hero-btn">Comprar ahora</a>
-                                </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-8">
+                        <div class="hero__caption">
+                            <span data-animation="fadeInRight" data-delay=".4s">60% De descuento </span>
+                            <h1 data-animation="fadeInRight" data-delay=".6s">El verano <br> Está acá</h1>
+                            <p data-animation="fadeInRight" data-delay=".8s">Colección de verano</p>
+                            <!-- Hero-btn -->
+                            <div class="hero__btn" data-animation="fadeInRight" data-delay="1s">
+                                <a href="#" class="btn hero-btn">Comprar ahora</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="single-slider slider-height" data-background="assets/img/hero/h1_hero.jpg">
-                <div class="container">
-                    <div class="row d-flex align-items-center justify-content-between">
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-none d-md-block">
-                            <div class="hero__img" data-animation="bounceIn" data-delay=".4s">
-                                <img src="assets/img/hero/hero_man.png" alt="">
-                            </div>
+        </div>
+        <div class="single-slider slider-height" data-background="assets/img/hero/h1_hero.jpg">
+            <div class="container">
+                <div class="row d-flex align-items-center justify-content-between">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-none d-md-block">
+                        <div class="hero__img" data-animation="bounceIn" data-delay=".4s">
+                            <img src="assets/img/hero/hero_man.png" alt="">
                         </div>
-                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-8">
-                            <div class="hero__caption">
-                                <span data-animation="fadeInRight" data-delay=".4s">50% en segunda compra</span>
-                                <h1 data-animation="fadeInRight" data-delay=".6s">Verano <br> Nueva colección</h1>
-                                <p data-animation="fadeInRight" data-delay=".8s">No esperes más</p>
-                                <!-- Hero-btn -->
-                                <div class="hero__btn" data-animation="fadeInRight" data-delay="1s">
-                                    <a href="industries.html" class="btn hero-btn">Comprar ahora</a>
-                                </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-8">
+                        <div class="hero__caption">
+                            <span data-animation="fadeInRight" data-delay=".4s">50% en segunda compra</span>
+                            <h1 data-animation="fadeInRight" data-delay=".6s">Verano <br> Nueva colección</h1>
+                            <p data-animation="fadeInRight" data-delay=".8s">No esperes más</p>
+                            <!-- Hero-btn -->
+                            <div class="hero__btn" data-animation="fadeInRight" data-delay="1s">
+                                <a href="industries.html" class="btn hero-btn">Comprar ahora</a>
                             </div>
                         </div>
                     </div>
@@ -50,15 +52,17 @@
             </div>
         </div>
     </div>
-    <!-- slider Area End-->
-    <!-- Category Area Start-->
-    <section class="category-area section-padding30">
-        <div class="container-fluid">
-            <!-- Section Tittle -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-tittle text-center mb-10">
-                        <h2>Bienvenidos</h2>
+</div>
+<!-- slider Area End-->
+<!-- Category Area Start-->
+<section class="category-area section-padding30">
+    <div class="container-fluid">
+        <!-- Section Tittle -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-tittle text-center mb-10">
+                    <h2>Bienvenidos</h2>
+          
                         <hr>
                     </div>
                 </div>
@@ -712,4 +716,4 @@
     <!-- Latest Products End -->
 
 
-<?php include 'pie.php'; ?>
+    <?php include 'pie.php'; ?>
