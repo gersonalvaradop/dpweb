@@ -76,6 +76,7 @@
 		$('#formulario').submit(function(event) {
 			event.preventDefault();
 
+
 			$.ajax({
 				url: 'peticiones.php',
 				type: 'POST',

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!doctype html>
 <html lang="es">
 <head>
@@ -64,7 +65,7 @@
                                             <li><a href="productos.php">Productos</a></li>
                                             <li><a href="encuesta.php">Encuesta</a></li>
                                             <li><a href="contact.php">Contacto</a></li>
-                                            <li><a href="#">Asignaciones Anteriores</a>
+                                            <li><a href="#">Otros</a>
                                                 <ul class="submenu">
                                                      <li><a href="oldproyect/historia.html">Historia del sitio</a> </li>
                                                      <li><a href="oldproyect/plataformas.html">Plataformas Web</a> </li>
@@ -72,11 +73,20 @@
                                                      <li><a href="oldproyect/servidores.html">Servidores Web</a> </li>
                                                      <li><a href="oldproyect/internet.html">Internet de las cosas</a> </li>
                                                      <li><a href="oldproyect/info.html">Informacion del grupo</a> </li>
-                                                     <li><a href="oldproyect/glosario.html">Glosario</a> </li>
+                                                     <li><a href="oldproyect/glosario.html">Glosario</a> </li> 
                                                 </ul>
+                                                <?php if (isset($_SESSION['id'])): ?>
+                                                     <li><a href="logout.php">Salir</a> </li>
+                                                <?php endif ?>
+                                                    
                                             </li>
                                         </ul>
                                     </nav>
+                                    <?php if (isset($_SESSION['nombre'])): ?>
+                                        <?php if ($_SESSION['rol']==2): ?>
+                                        <h3>Bienvenido <?php echo $_SESSION['nombre']; ?></h3>
+                                        <?php endif ?>
+                                    <?php endif ?>
                                 </div>
                             </div> 
                             <div class="col-xl-5 col-lg-3 col-md-3 col-sm-3 fix-card">
@@ -95,7 +105,7 @@
                                         </div>
                                     </li>
                                     <li class="d-none d-lg-block"> <a href="login.php" class="btn header-btn">Login</a></li>
-                                     <li class="d-none d-lg-block"> <a href="registro.php" class="btn header-btn">Registrate</a></li
+                                     <li class="d-none d-lg-block"> <a href="registro.php" class="btn header-btn">Registrate</a></li>
                                     
                                 </ul>
                             </div>
