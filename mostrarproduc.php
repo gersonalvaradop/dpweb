@@ -33,7 +33,8 @@
 					<td><?php echo $row['precio']; ?></td>
 					<td><?php echo $row['cantidad']; ?></td>
 					<td><?php echo $row['provedor']; ?></td>
-					<td><img width="90" height="48" src="data:imagen/png;base64,<?php echo base64_encode($row['imagen'])?>;"></td>
+					<td><img width="90" height="48" src="data:image/png;base64,<?php echo base64_encode($row['imagen'])?>;">
+					</td>
 					<td><?php echo $row['descripcion']; ?></td>
 					<td><?php echo $row['categoria']; ?></td>
 					<td><a href="#">Modificar</a></td>

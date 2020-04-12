@@ -35,7 +35,7 @@
 			<h1 id="brown">INGRESAR NUEVO PRODUCTO</h1>
 		</div>
 		<div align="center"  >
-			<form name="Producto" id="prod" method="post" enctype="multipart/form-data" action="">
+			<form name="Producto" id="prod" method="post" enctype="multipart/form-data" action="guardar.php">
 				<table border="0" id="azul">
 					<tr height="50">
 						<td height="50">Ingrese Nombre del Producto<span lang="en-us">:</span> </td>
