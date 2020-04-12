@@ -1,4 +1,9 @@
 <?php session_start(); ?>
+<?php 
+include 'mysql.php';
+$c = new Conexion();
+
+ ?>
 <!doctype html>
 <html lang="es">
 <head>
