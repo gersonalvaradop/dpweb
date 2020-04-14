@@ -1,10 +1,10 @@
 <?php 
-
-$conexion = new mysqli("localhost","root","","jardineria");
-	if ($conexion) {
-		
-	}else{
-		echo "no se pudo conectar ";
+	//Estableciendo la conexion a la BD
+	$conexion = new mysqli("localhost", "root", "", "jardineria");
+	
+	if ($conexion->connect_errno) {
+		//die() detiene o termina la ejecucion del codigo php
+	    die("Fallo al conectar a MySQL: (".$conexion->connect_errno." ) ".$conexion->connect_error);
 	}
+	
 ?>
-

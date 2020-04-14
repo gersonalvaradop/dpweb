@@ -86,7 +86,7 @@
 				</td>
 			</tr>
 			<tr height="55">
-				<td>&nbsp;&nbsp;9.- ¿Que tipo de producto te llamo mas la atencion?</td>
+				<td>&nbsp;&nbsp;9.- ¿Que tipo de categoria de productos te llamo mas la atencion?</td>
 				<td>
 					&nbsp;<select name="Sel_Prod">
 						<option value="0">Seleccione...</option>
@@ -158,9 +158,9 @@
 			<tr height="55">
 				<td colspan="2" align="Center">
 					
-					<button type="submit" class="btn btn-sucess">Completar Encuesta</button>
+					<button type="submit" class="btn btn-dark">Completar Encuesta</button>
 					&nbsp;&nbsp;&nbsp;&nbsp;
-					<button type="reset" class="btn btn-warning">Cancelar y Borrar</button>
+					<button type="reset" class="btn btn-danger">Cancelar y Borrar</button>
 
 				</td>
 			</tr>

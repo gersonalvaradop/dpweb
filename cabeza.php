@@ -1,10 +1,4 @@
-<?php session_start(); ?>
-<?php 
-include 'mysql.php';
-$c = new Conexion();
-
- ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8">
