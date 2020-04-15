@@ -3,10 +3,10 @@
 <head>
 	<meta charset="UTF-8"/>
 	<title>Lista de productos.</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="https://kit.fontawesome.com/01b75cf0b9.js" crossorigin="anonymous"></script>
  
@@ -47,11 +47,13 @@
 							</td>
 							<td align="center"><?php echo $row['descripcion']; ?></td>
 							<td align="center"><?php echo $row['categoria']; ?></td>
-							<td align="center"><a type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal_editar" ><i class="fas fa-edit"></i> Modificar </a></button></td>
-							<td align="center"><button type="button" class="btn btn-danger">Eliminar <i class="fas fa-trash-alt"></i></button></td>
+							<td align="center"><a type="button" class="btn btn-warning" onclick="mostrarModal('<?= $row['nombre']?>','<?= $row['categoria']?>','<?= $row['cantidad']?>','<?= $row['precio']?>','<?= $row['provedor']?>','<?= $row['descripcion']?>','<?= $row['id']?>',)" ><i class="fas fa-edit"></i> Modificar </a></button></td>
+
+
+							<td align="center"><a  class="btn btn-danger" href="eliminar.php?idElemento=<?= $row['id']?>&otra=cosa&omaewa=noshideru" >Eliminar <i class="fas fa-trash-alt"></i></a></td>
 							
 						</tr>
-						<?php 
+					<?php 
 					}
 					?>
 
@@ -70,7 +72,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form name="EditPro" id="edipro" method="post" enctype="multipart/form-data" action="actualizar.php">
           <table border="0" id="azul">
 					<tr height="50">
 						<td height="50">Ingrese Nombre del Producto<span lang="en-us">:</span> </td>
@@ -109,20 +111,41 @@
 						<td>Descripcion: </td>
 						<td><textarea name="Comentario" id="comentario" rows="" cols="30" maxlength="30"> </textarea></td>
 					</tr>	
+					<tr height="50">
+						<input type="hidden" name="id" id="id" value="">
+					</tr>	
+
 			</table>
-        </form>
+       
     
 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary">Guardar</button>
+        <button type="submit" class="btn btn-primary">Guardar</button>
       </div>
     </div>
+     </form>
   </div>
 </div>
 <!-- aqui finaliza el model...-->
 
+<script>
+	function mostrarModal(nombre,categoria,cantidad,precio,proveedor,comentario,id){
+		$('#Nombre').val(nombre);
+		$('#categoria').val(categoria);
+		$('#Cantidad').val(cantidad);
+		$('#precio').val(precio);
+		$('#provedor').val(proveedor);
+		$('#comentario').val(comentario);
+		$('#id').val(id);
+		$('#modal_editar').modal();
+	}	
 
+	function elimina(id){
+
+		$('#id').val(id);
+	}
+</script>
 </body>
 </html>
