@@ -76,7 +76,7 @@
           <table border="0" id="azul">
 					<tr height="50">
 						<td height="50">Ingrese Nombre del Producto<span lang="en-us">:</span> </td>
-						<td><input type="text" name="Nombre" id="Nombre" class="selection"  required placeholder="Escriba un nombre" pattern="^[a-zA-Z ]*$" ></td>
+						<td><input type="text" name="Nombre" id="Nombre" class="selection"  required placeholder="Escriba un nombre"  ></td>
 					</tr>	
 					<tr height="50">
 						<td>Categoria:</td>
@@ -109,7 +109,7 @@
 					</tr -->
 					<tr height="50">
 						<td>Descripcion: </td>
-						<td><textarea name="Comentario" id="comentario" rows="" cols="30" maxlength="30"> </textarea></td>
+						<td><textarea name="Comentario" id="comentario" rows="" cols="40" maxlength="40"> </textarea></td>
 					</tr>	
 					<tr height="50">
 						<input type="hidden" name="id" id="id" value="">
