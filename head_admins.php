@@ -96,7 +96,7 @@
                                     <li>
                                        
                                     </li>
-                                    <li class="d-none d-lg-block"> <a href="login.php" class="btn header-btn">Log Out</a></li>                                                      
+                                    <li class="d-none d-lg-block"> <a href="login.php" class="btn-outline-secondary btn-sm">Cerrar sesión</a></li>                                                      
                                 </ul>
                             </div>
                             <!-- Mobile Menu -->
