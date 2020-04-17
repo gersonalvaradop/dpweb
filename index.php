@@ -1,5 +1,4 @@
 <?php 
-include 'mysql.php';
 include 'cabeza.php';
 ?>
 

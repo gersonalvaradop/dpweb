@@ -1,6 +1,7 @@
-<<?php 
+<?php 
 include ('conexion.php');
-
+	
+	$id = $_POST['id'];
  	$nombre = $_POST['Nombre'];
  	$categoria = $_POST['Categoria'];
  	$cantidad = $_POST['Cantidad'];
@@ -12,10 +13,13 @@ include ('conexion.php');
 	$query = "INSERT INTO producto(nombre,precio,cantidad,provedor,imagen,descripcion,categoria)values('$nombre','$precio','$cantidad','$provedor','$imagen','$comentario','$categoria')";
 
 	$resultado = $conexion->query($query);
-	#	if ($resultado) {
-	#		echo "datos guardados exitosamente";
-	#	}else{
-	#		echo "Error no se guardo";
-#
-#		}
+		if ($resultado) {
+			header("location: mostrarproduc.php");
+		}else{
+			echo "Error no se guardo";
+
+		}
+
+
  ?>
+}

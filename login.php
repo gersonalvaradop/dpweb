@@ -61,6 +61,7 @@
 								<button type="submit" value="submit" class="btn-sm btn-primary">
 									Iniciar sesión
 								</button>
+								<br />
 								<a class="lost_pass" style="color: blue;" href="#">Olvide mi password</a>
 							</div>
 						</form>

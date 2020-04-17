@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 16, 2020 at 07:42 AM
+-- Generation Time: Apr 15, 2020 at 06:18 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -19,31 +19,41 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `jardineria`
+-- Database: `dpweb`
 --
+CREATE DATABASE IF NOT EXISTS `dpweb` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `dpweb`;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categorias`
+-- Table structure for table `clientes`
 --
 
-CREATE TABLE `categorias` (
-  `id` int(11) NOT NULL,
-  `nombre` varchar(20) CHARACTER SET latin1 COLLATE latin1_spanish_ci NOT NULL,
-  `activo` int(11) NOT NULL DEFAULT 0,
-  `orden` int(11) DEFAULT 1
+CREATE TABLE `clientes` (
+  `codcliente` int(11) NOT NULL,
+  `nombre` varchar(25) NOT NULL,
+  `apellido` varchar(25) NOT NULL,
+  `dui` char(10) NOT NULL,
+  `direccion` varchar(100) NOT NULL,
+  `estado` char(1) NOT NULL DEFAULT 'A',
+  `codciudad` char(3) NOT NULL,
+  `correo` varchar(100) NOT NULL,
+  `usuario` varchar(25) NOT NULL,
+  `clave` varchar(15) NOT NULL,
+  `tipousuario` varchar(12) NOT NULL DEFAULT 'cliente'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `categorias`
+-- Dumping data for table `clientes`
 --
 
-INSERT INTO `categorias` (`id`, `nombre`, `activo`, `orden`) VALUES
-(1, 'Herramientas', 1, 1),
-(2, 'Decoracion', 1, 2),
-(3, 'Plantas', 1, 3),
-(4, 'Otra', 1, 4);
+INSERT INTO `clientes` (`codcliente`, `nombre`, `apellido`, `dui`, `direccion`, `estado`, `codciudad`, `correo`, `usuario`, `clave`, `tipousuario`) VALUES
+(1, 'Tomas ', 'Urbina', '12345678-9', 'Utec', 'A', 'soy', 'tu@gmail.com', 'tomas.urbina', '123456', 'admin'),
+(2, 'Juan', 'Perez', '321321', 'Utec', 'A', 'cba', 'jp@gmail.com', 'juan.perez', '123456', 'cliente'),
+(3, 'Mario', 'Lopez', '321456', 'Aqui', 'A', 'soy', 'ml@gmail.com', 'mario.lopez', '123456', 'cliente'),
+(4, 'Leo ', 'Messi', '10', 'utec', 'A', 'soy', 'leo@gmail.com', 'leo.messi', '12345', 'cliente'),
+(5, 'Cristiano', 'Ronaldo', '7', 'madrid', 'A', 'soy', 'cr7@gmail.com', 'cristiano', '12345', 'cliente');
 
 -- --------------------------------------------------------
 
@@ -54,14 +64,14 @@ INSERT INTO `categorias` (`id`, `nombre`, `activo`, `orden`) VALUES
 CREATE TABLE `departamentos` (
   `cod_dpto` int(2) NOT NULL,
   `nom_dpto` varchar(12) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `departamentos`
 --
 
 INSERT INTO `departamentos` (`cod_dpto`, `nom_dpto`) VALUES
-(1, 'Ahuachapan'),
+(1, 'Ahuachapán'),
 (2, 'Cabañas'),
 (3, 'Chalatenango'),
 (4, 'Cuscatlán'),
@@ -85,16 +95,16 @@ INSERT INTO `departamentos` (`cod_dpto`, `nom_dpto`) VALUES
 CREATE TABLE `municipios` (
   `cod_mun` int(2) NOT NULL,
   `cod_dpto` int(2) NOT NULL,
-  `nom_mun` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `nom_mun` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `municipios`
 --
 
 INSERT INTO `municipios` (`cod_mun`, `cod_dpto`, `nom_mun`) VALUES
-(1, 1, 'Apaneca'),
-(2, 1, 'Ahuachapán'),
+(1, 1, 'Ahuachapán'),
+(2, 1, 'Apaneca'),
 (3, 1, 'Atiquizaya'),
 (4, 1, 'Concepción de Ataco'),
 (5, 1, 'El Refugio'),
@@ -356,57 +366,16 @@ INSERT INTO `municipios` (`cod_mun`, `cod_dpto`, `nom_mun`) VALUES
 (261, 14, 'Santiago de María'),
 (262, 14, 'Tecapán');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `producto`
---
-
-CREATE TABLE `producto` (
-  `id` int(11) NOT NULL,
-  `nombre` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
-  `precio` float NOT NULL,
-  `cantidad` int(11) NOT NULL,
-  `provedor` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
-  `imagen` longblob NOT NULL,
-  `descripcion` varchar(200) COLLATE utf8_spanish2_ci NOT NULL,
-  `categoria` varchar(20) COLLATE utf8_spanish2_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `usuarios`
---
-
-CREATE TABLE `usuarios` (
-  `id` int(11) NOT NULL,
-  `nombre` varchar(50) NOT NULL,
-  `usuario` varchar(20) NOT NULL,
-  `password` varchar(64) NOT NULL,
-  `correo` varchar(100) NOT NULL,
-  `telefono` varchar(20) NOT NULL,
-  `rol` varchar(20) NOT NULL,
-  `registrado` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `usuarios`
---
-
-INSERT INTO `usuarios` (`id`, `nombre`, `usuario`, `password`, `correo`, `telefono`, `rol`, `registrado`) VALUES
-(1, 'Ronald Arce', 'rarce', 'b1adc6c3dfffb991b51dccea24eb24ef', 'rarce@jardin.com', '1111112321', '1', '2020-04-09 22:16:16'),
-(2, 'Yamir', 'ynovosky', 'b1adc6c3dfffb991b51dccea24eb24ef', 'ynovosky@jardin.com', '1111112321', '2', '2020-04-09 22:16:16');
-
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `categorias`
+-- Indexes for table `clientes`
 --
-ALTER TABLE `categorias`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `clientes`
+  ADD PRIMARY KEY (`codcliente`),
+  ADD KEY `codciudadcliente` (`codciudad`);
 
 --
 -- Indexes for table `departamentos`
@@ -422,26 +391,14 @@ ALTER TABLE `municipios`
   ADD KEY `cod_dpto` (`cod_dpto`);
 
 --
--- Indexes for table `producto`
---
-ALTER TABLE `producto`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `usuarios`
---
-ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `categorias`
+-- AUTO_INCREMENT for table `clientes`
 --
-ALTER TABLE `categorias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+ALTER TABLE `clientes`
+  MODIFY `codcliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `departamentos`
@@ -456,20 +413,14 @@ ALTER TABLE `municipios`
   MODIFY `cod_mun` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=263;
 
 --
--- AUTO_INCREMENT for table `producto`
---
-ALTER TABLE `producto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
-
---
--- AUTO_INCREMENT for table `usuarios`
---
-ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `clientes`
+--
+ALTER TABLE `clientes`
+  ADD CONSTRAINT `clientes_ibfk_1` FOREIGN KEY (`codciudad`) REFERENCES `ciudades` (`codciudad`);
 
 --
 -- Constraints for table `municipios`
