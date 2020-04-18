@@ -1,8 +1,8 @@
 <?php 
 include ('conexion.php');
 	
-	$id = $_POST['id'];
- 	$nombre = $_POST['Nombre'];
+	
+	$nombre = $_POST['Nombre'];
  	$categoria = $_POST['Categoria'];
  	$cantidad = $_POST['Cantidad'];
 	$precio = $_POST['Precio']; 
