@@ -52,7 +52,7 @@
                             <!-- Logo -->
                             <div class="col-xl-1 col-lg-1 col-md-1 col-sm-3">
                                 <div class="logo">
-                                  <a href="users.php"><img src="assets/img/logo/logon.png" alt=""></a>
+                                  <a href="index.php"><img src="assets/img/logo/logon.png" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-8 col-md-7 col-sm-5">
@@ -97,7 +97,7 @@
                                     <li>
                                        
                                     </li>
-                                    <li class="d-none d-lg-block"> <a href="login.php" class="btn header-btn">Log Out</a></li>                                                      
+                                    <li class="d-none d-lg-block"> <a href="login.php" class="btn-outline-secondary btn-sm">Cerrar sesión</a></li>                                                      
                                 </ul>
                             </div>
                             <!-- Mobile Menu -->

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -103,8 +104,8 @@
                                         <a href="#"><i class="fas fa-shopping-cart"></i></a>
                                         </div>
                                     </li>
-                                    <li class="d-none d-lg-block"> <a href="login.php" class="btn header-btn">Login</a></li>
-                                     <li class="d-none d-lg-block"> <a href="registro.php" class="btn header-btn">Registrate</a></li>
+                                    <li class="d-none d-lg-block"> <a href="login.php" class="btn-sm btn-primary">Login</a></li>
+                                     <li class="d-none d-lg-block"> <a href="registro.php" class=" btn-sm btn-outline-secondary">Registrate</a></li>
                                     
                                 </ul>
                             </div>

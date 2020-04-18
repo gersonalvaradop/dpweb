@@ -33,7 +33,7 @@
 
 <body>
 
-	<a href="index.php" class="btn btn-primary float-right" title="">Regresar</a>
+	<a href="index.php" class="btn-sm btn-primary float-right" title="">Regresar</a>
 	<div class="container">
 		<div class="row align-items-center">
 
@@ -44,7 +44,7 @@
 						<br>
 						<img src="https://static.vecteezy.com/system/resources/previews/000/585/414/non_2x/vector-leaf-green-nature-logo-and-symbol-template.jpg" style="width: 250px;" alt="">
 						<br>
-						<h3>Area de registro <br>
+						<h3>Inicio de sesión <br>
 						Ingresa tus datos</h3>
 						<form id="formulario" class="row contact_form" action="#" method="post" >
 							<div class="col-md-12 form-group p_star">
@@ -58,9 +58,10 @@
 									<input type="checkbox" id="f-option" name="selector">
 									<label for="f-option">Recuerdame</label>
 								</div>
-								<button type="submit" value="submit" class="btn_3">
-									log in
+								<button type="submit" value="submit" class="btn-sm btn-primary">
+									Iniciar sesión
 								</button>
+								<br />
 								<a class="lost_pass" style="color: blue;" href="#">Olvide mi password</a>
 							</div>
 						</form>
