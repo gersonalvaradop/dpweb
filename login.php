@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="es">
 <head>
 	<meta charset="utf-8">
@@ -82,8 +82,9 @@
 				url: 'peticiones.php',
 				type: 'POST',
 				dataType: 'json',
-				data: {login_peticion: '$sdf546', usuario:$('#usuario').val(), password:$('#password').val(),},
+				data: {login_peticion: 'asdGsdf/678&/(fbrtyYH$%Efgsdg$', usuario:$('#usuario').val(), password:$('#password').val(),},
 			})
+			/*$sdf546*/
 			.done(function(data) {
 				if (data.exito==1) {
 					let timerInterval

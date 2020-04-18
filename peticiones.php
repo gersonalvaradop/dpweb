@@ -32,9 +32,9 @@ if ($_POST['login_peticion']) {
 	$_SESSION['id'] = $r[0]['id'];
 
 	if ($r[0]['rol']==1) {
-		echo json_encode(array('exito'=>1,'mensaje'=>'Exito','nombre'=>$r[0]['nombre'], "redireccion"=>'./admin/index.php'));
+		echo json_encode(array('exito'=>1,'mensaje'=>'Exito','nombre'=>$r[0]['nombre'], "redireccion"=>'admin.php'));
 	}else{
-		echo json_encode(array('exito'=>1,'mensaje'=>'Exito','nombre'=>$r[0]['nombre'], "redireccion"=>'index.php'));
+		echo json_encode(array('exito'=>1,'mensaje'=>'Exito','nombre'=>$r[0]['nombre'], "redireccion"=>'users.php'));
 	}
 
 
