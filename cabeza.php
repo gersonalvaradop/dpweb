@@ -75,18 +75,9 @@
                                                      <li><a href="oldproyect/info.html">Informacion del grupo</a> </li>
                                                      <li><a href="oldproyect/glosario.html">Glosario</a> </li> 
                                                 </ul>
-                                                <?php if (isset($_SESSION['id'])): ?>
-                                                     <li><a href="logout.php">Salir</a> </li>
-                                                <?php endif ?>
-                                                    
                                             </li>
                                         </ul>
                                     </nav>
-                                    <?php if (isset($_SESSION['nombre'])): ?>
-                                        <?php if ($_SESSION['rol']==2): ?>
-                                        <h3>Bienvenido <?php echo $_SESSION['nombre']; ?></h3>
-                                        <?php endif ?>
-                                    <?php endif ?>
                                 </div>
                             </div> 
                             <div class="col-xl-5 col-lg-3 col-md-3 col-sm-3 fix-card">
@@ -104,9 +95,16 @@
                                         <a href="#"><i class="fas fa-shopping-cart"></i></a>
                                         </div>
                                     </li>
-                                    <li class="d-none d-lg-block"> <a href="login.php" class="btn-sm btn-primary">Login</a></li>
-                                     <li class="d-none d-lg-block"> <a href="registro.php" class=" btn-sm btn-outline-secondary">Registrate</a></li>
-                                    
+                                    <li>
+                                        <div>
+                                            <a href="login.php" class="btn-sm btn-primary">Login</a>
+                                        </div> 
+                                    </li>
+                                    <li> 
+                                        <div>
+                                            <a href="registro.php" class="btn-sm btn-secondary">Registrate</a>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
                             <!-- Mobile Menu -->

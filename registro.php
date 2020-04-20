@@ -140,9 +140,10 @@
                 </div>
                 <div class="col-sm-4">
                       <div id="lis_mun" class="form-group">
-                          
+
                       </div>
                 </div>
+
             </div>
 
             <!--Contraseña-->
@@ -175,15 +176,15 @@
 
 </div>
 <?php include 'pie.php' ?>
-
+<
 <script type="text/javascript">
     $(document).ready(function(){
         $('#dptos').val(1);
         recargarLista();
 
-        $('#dptos').change(function(){
-          recargarLista();
-        });
+    $('#dptos').change(function(){
+        recargarLista();
+    });
     })
 </script>
 <script type="text/javascript">
