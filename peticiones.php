@@ -15,7 +15,7 @@ $_POST  = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
 
 
-if ($_POST['login_peticion']) {
+if (isset($_POST['login_peticion'])) {
 	$usuario = $_POST['usuario'];
 	$password = $_POST['password'];
 	$r = q("select * from usuarios where usuario = '".$usuario."'");
@@ -48,6 +48,48 @@ if ($_POST['login_peticion']) {
 		echo json_encode(array('exito'=>1,'mensaje'=>'Exito','nombre'=>$data->nombre, "redireccion"=>'admin/index.php'));
 	}else{
 		echo json_encode(array('exito'=>1,'mensaje'=>'Exito','nombre'=>$data->nombre, "redireccion"=>'users.php'));
+	}
+
+
+}
+
+if (isset($_POST['registrar'])) {
+	$nombre = trim($_POST['nombre']." ".$_POST['apellido']);
+	$usuario = trim($_POST['username']);
+	$correo = trim($_POST['email']);
+	$telefono = trim($_POST['telefono']);
+	$password = md5($hash.trim($_POST['psw']));
+	$rol = 2;
+	//$dptos = $_POST['dptos'];
+	//$muni = $_POST['muni'];
+
+
+
+	$r = q("select * from usuarios where usuario = '".$usuario."'");
+	if ($r->num_rows>0) {
+		echo json_encode(array('exito'=>0,'mensaje'=>'Usuario existente'));
+		die();
+	}
+
+
+
+	$r = q("select * from usuarios where correo = '".$correo."'");
+	if ($r->num_rows>0) {
+		echo json_encode(array('exito'=>0,'mensaje'=>'Correo existente existente'));
+		die();
+	}
+
+
+
+	$r = q("INSERT INTO usuarios (nombre, usuario, correo, telefono, password,rol)
+VALUES ('$nombre', '$usuario', '$correo', '$telefono', '$password','$rol')");
+
+	if ($r) {
+		echo json_encode(array('exito'=>1,'mensaje'=>'Exito','nombre'=>$nombre, "redireccion"=>'index.php'));
+		die();
+	}else{
+		echo json_encode(array('exito'=>0,'mensaje'=>'Password incorrecto'));
+		die();
 	}
 
 

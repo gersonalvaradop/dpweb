@@ -1,5 +1,5 @@
 <?php 
-include 'mysql.php';
+include 'conexion.php';
 include 'head_users.php';
 ?>
 

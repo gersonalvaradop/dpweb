@@ -1,7 +1,5 @@
-﻿<?php require 'header.php'; ?>
-        
-
-        <div class="container-fluid">
+<?php require 'header.php'; ?>
+<div class="container-fluid">
             <div class="block-header">
                 <h2>DASHBOARD</h2>
             </div>
@@ -84,5 +82,4 @@
             
 
 <script src="js/pages/index.js"></script>
-
 <?php require 'footer.php'; ?>

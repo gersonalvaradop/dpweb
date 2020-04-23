@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php if (session_status() !== PHP_SESSION_ACTIVE) {session_start();} ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    
 
     <!-- JS here -->
     <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
@@ -118,5 +119,4 @@
         </div>
     </header>
     <!-- Header End -->
-
 <main>
