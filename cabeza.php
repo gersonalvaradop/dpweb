@@ -97,12 +97,12 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <div>
+                                        <div style="margin-top: 12px;">
                                             <a href="login.php" class="btn-sm btn-primary">Login</a>
                                         </div> 
                                     </li>
                                     <li> 
-                                        <div>
+                                        <div style="margin-top: 12px;">
                                             <a href="registro.php" class="btn-sm btn-secondary">Registrate</a>
                                         </div>
                                     </li>
