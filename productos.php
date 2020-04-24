@@ -20,10 +20,10 @@
 					  <a href="#" class="btn-lg btn-success btn-block"> PRECIO: $ <?php echo $row['precio']; ?></a><br>
 					  	 <div class="row">
 					        <div class="col-lg-6">
-					        	<a href="#" class="btn-lg btn-warning">Comprar</a>
+					        	<a href="#" class="btn-lg btn-warning btn-block">Comprar</a>
 					        </div>
 					        <div class="col-lg-6" align="right">
-					        	<a href="#" class="btn-lg btn-danger">No me gusta</a>
+					        	<a href="#" class="btn-lg btn-danger btn-block" style="font-size: 16px;">No me gusta</a>
 					        </div>
 					    </div>
 					  </div>

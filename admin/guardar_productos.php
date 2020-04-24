@@ -1,5 +1,5 @@
 <?php 
-include ('conexion.php');
+include ('../conexion.php');
 	
 	
 	$nombre = $_POST['Nombre'];
@@ -14,7 +14,7 @@ include ('conexion.php');
 
 	$resultado = $conexion->query($query);
 		if ($resultado) {
-			header("location: mostrarproduc.php");
+			header("location: agregar_productos.php?mensaje=Productos Ingresados");
 		}else{
 			echo "Error no se guardo";
 

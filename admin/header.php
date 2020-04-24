@@ -43,8 +43,6 @@ if ($_SESSION['rol']!=1) {
 	<!-- Bootstrap Core Js -->
 	<script src="plugins/bootstrap/js/bootstrap.js"></script>
 
-	<!-- Select Plugin Js -->
-	<script src="plugins/bootstrap-select/js/bootstrap-select.js"></script>
 
 	<!-- Slimscroll Plugin Js -->
 	<script src="plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
@@ -175,6 +173,20 @@ if ($_SESSION['rol']!=1) {
 									<span>Productos</span>
 								</a>
 							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:void(0);" class="menu-toggle">
+							<i class="material-icons">library_books</i>
+							<span>Productos</span>
+						</a>
+						<ul class="ml-menu">
+							<li>
+								<a href="agregar_productos.php">
+									<span>Agregar</span>
+								</a>
+							</li>
+
 						</ul>
 					</li>
 
