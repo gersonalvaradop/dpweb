@@ -45,9 +45,9 @@ include ('../conexion.php');
 					</thead>
 					<tbody>
 						<?php 
-
+						$conexion->query("SET NAMES 'utf8'");
 						$query = "SELECT p.id, p.nombre, precio, cantidad, provedor, imagen, descripcion, c.nombre as categoria FROM producto p left join categorias c on p.categoria = c.id";
-						$resultado = $conexion-> query($query);
+						$resultado = $conexion->query($query);
 						if($resultado)
 							while ($row=$resultado->fetch_assoc()) { ?>
 								<tr>									

@@ -1,4 +1,5 @@
 <?php session_start();
+header("Content-Type: text/html;charset=utf-8");
 if ($_SESSION['rol']!=1) {
 	header('location: logout.php');
 }
