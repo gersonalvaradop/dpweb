@@ -713,6 +713,27 @@ include 'cabeza.php';
         </div>
     </section>
     <!-- Latest Products End -->
+<script>
+    
+<?php 
 
+if (isset($_GET['mensaje'])) {
+    echo "Swal.fire(
+                        'Mensaje',
+                        '".$_GET['mensaje']."',
+                        'success'
+                        );";
+}
+
+if (isset($_GET['error'])) {
+   echo "Swal.fire({
+                    icon: 'error',
+                    title: 'Problemas',
+                    text: '".$_GET['error']."'
+                });";
+}
+
+ ?> 
+</script>
 
     <?php include 'pie.php'; ?>

@@ -24,9 +24,9 @@ $ejecutar = mysqli_query($conexion, $consulta);
 
 // Validacion
 if (!$ejecutar) {
-	header("location:encuesta.php");
+	header("location:encuesta.php?error=no Se pudo ingresar su encuesta");
 } else {
-	header("location:index.php");
+	header("location:index.php?mensaje=Encuesta ingresada con exito");
 }
 
 ?>
