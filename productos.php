@@ -1,13 +1,8 @@
 <?php  include ('cabeza.php') ?>
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<<<<<<< HEAD
-	 <script src="assets/js/pinterest_grid.js"></script>
-	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-=======
 	<script src="assets/js/pinterest_grid.js"></script>
 
->>>>>>> 25704798a1df9494f1cd204830387ac4c7d8f7ec
 <div class="container">
 	<div class="row">
 		<?php include ('conexion.php');

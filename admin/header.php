@@ -144,13 +144,6 @@ if ($_SESSION['rol']!=1) {
 							<span>Inicio</span>
 						</a>
 					</li>
-					<li class="">
-						<a href="esquemadb.php">
-							<i class="material-icons">storage</i>
-							<span>DiagramaDB</span>
-						</a>
-					</li>
-
 					<li>
 						<a href="javascript:void(0);" class="menu-toggle">
 							<i class="material-icons">perm_identity</i>
@@ -182,6 +175,19 @@ if ($_SESSION['rol']!=1) {
 							</li>
 						</ul>
 					</li>
+					<li class="">
+						<a href="esquemadb.php">
+							<i class="material-icons">storage</i>
+							<span>DiagramaDB</span>
+						</a>
+					</li>
+					<li class="">
+						<a href="contactos_detalle.php">
+							<i class="material-icons">account_box</i>
+							<span>Contactos</span>
+						</a>
+					</li>
+
 					<li>
 						<a href="javascript:void(0);" class="menu-toggle">
 							<i class="material-icons">library_books</i>

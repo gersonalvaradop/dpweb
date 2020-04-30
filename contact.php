@@ -36,7 +36,7 @@
                 </div>
             </div>
                <div class="form-group mt-3">
-               <button type="submit" name="btn" value="Guardar" class="btn btn-succes" heigth="50"  onclick="ale();">Guardar<i class="fas fa-save"></i></button>
+               <button type="submit" name="btn" value="Guardar" class="btn btn-succes" heigth="50"  onclick="">Guardar<i class="fas fa-save"></i></button>
             </div>
         </form>
         </div>
@@ -68,9 +68,49 @@
     </div>
 </div>
 <script type="text/javascript">
-    function ale(){
-        alert('muy pronto nos pondremos en contacto con tigo');
+    $('#contactForm').submit(function(event) {
+        let nombre = $('#Nombre').val();
+        let email = $('#email').val();
+        let subject = $('#subject').val();
+        let msj = $('#Msj').val();
+
+
+    if(nombre==''){
+        event.preventDefault();
+        Swal.fire('Mensaje', 'El nombre no puede ir en blanco','question'); return;
     }
-    
+    if(email==''){
+        event.preventDefault();
+        Swal.fire('Mensaje', 'El email no puede ir en blanco','question'); return;
+    }
+    if(subject==''){
+        event.preventDefault();
+        Swal.fire('Mensaje', 'El asunto no puede ir en blanco','question'); return;
+    }
+    if(msj==''){
+        event.preventDefault();
+        Swal.fire('Mensaje', 'El mensaje no puede ir en blanco','question'); return;
+    }
+    });
+
+<?php 
+
+if (isset($_GET['mensaje'])) {
+    echo "Swal.fire(
+                        'Mensaje',
+                        '".$_GET['mensaje']."',
+                        'success'
+                        );";
+}
+
+if (isset($_GET['error'])) {
+   echo "Swal.fire({
+                    icon: 'error',
+                    title: 'Problemas',
+                    text: '".$_GET['error']."'
+                });";
+}
+
+ ?>    
 </script>
 <?php include 'pie.php'; ?>

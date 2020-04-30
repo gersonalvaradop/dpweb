@@ -1,4 +1,5 @@
 <?php include ('cabeza.php') ?>
+<link rel="stylesheet" href="assets/css/nice-select.css">
 <div class="container">
 	<div class="form">
 		<!--Survey form start-->
@@ -78,112 +79,12 @@
 						&nbsp;
 							<select id="Sel_Prod" name="Sel_Prod">
 
-<<<<<<< HEAD
-	<!--Survey form start-->
-	<form name="FrmEnc" id="FrmEnc" action="javascript:alert('Encuesta enviada!')" onsubmit="return ValidSurvey()">
-		<table width="100%">
-			<tr height="55">
-				<td colspan="2" align="Center"><h1>Encuesta al usuario</h1></td>
-			</tr>
-			<tr height="55">
-				<td>&nbsp;&nbsp;1.- Ingresa tu nombre:</td>
-				<td>
-					&nbsp;<input type="text" name="Nom" id="Nom" onkeypress="return SoloLetras(event);" onpaste="return false" min="2">
-				</td>
-			</tr>
-			<tr height="55">
-				<td>&nbsp;&nbsp;2.- Ingresa tu apellido:</td>
-				<td>
-					&nbsp;<input type="text" name="Ape" id="Ape" onkeypress="return SoloLetras(event);" onpaste="return false" min="2">
-				</td>
-			</tr>
-			<tr height="55">
-				<td>&nbsp;&nbsp;3.- Selecciona tu genero:</td>
-				<td><br>
-					&nbsp;<input type="radio" name="Sexo" value="M" id="Sexo[]" /> Masculino &nbsp;&nbsp;&nbsp;
-					&nbsp;<input type="radio" name="Sexo" value="F" id="Sexo[]" /> Femenino &nbsp;&nbsp;&nbsp;
-					&nbsp;<input type="radio" name="Sexo" value="N" id="Sexo[]" /> Prefiero no decirlo
-				</td>
-			</tr>
-			<tr height="55">
-				<td>&nbsp;&nbsp;4.- Selecciona tu pais:</td>
-				<td>
-					&nbsp;<select name="Sel_Pais">
-						<option value="0">Seleccione...</option>
-						<option value="1">Mexico</option>
-						<option value="2">Guatemala</option>
-						<option value="3">Belize</option>
-						<option value="4">Honduras</option>
-						<option value="4">El Salvador</option>
-						<option value="4">Nicaragua</option>
-						<option value="4">Costa Rica</option>
-						<option value="4">Panama</option>
-						<option value="4">Otro</option>
-					</select>
-				</td>
-			</tr>
-			<tr height="55">
-				<td>&nbsp;&nbsp;5.- ¿Que te parecio nuestra pagina?</td>
-				<td>
-					&nbsp;<input type="radio" name="Precio" value="MM" id="Precio[]" /> Muy Mala &nbsp;&nbsp;&nbsp;
-					&nbsp;<input type="radio" name="Precio" value="M" id="Precio[]" /> Mala &nbsp;&nbsp;&nbsp;
-					&nbsp;<input type="radio" name="Precio" value="R" id="Precio[]" /> Regular &nbsp;&nbsp;&nbsp;
-					&nbsp;<input type="radio" name="Precio" value="B" id="Precio[]" /> Buena &nbsp;&nbsp;&nbsp;
-					&nbsp;<input type="radio" name="Precio" value="MB" id="Precio[]" /> Muy Buena &nbsp;&nbsp;&nbsp;
-				</td>
-			</tr>
-			<tr height="55">
-				<td>&nbsp;&nbsp;6.- ¿Que te parecieron las marcas de nuestros productos?</td>
-				<td>
-					&nbsp;<input type="radio" name="ProCal" value="MM" id="ProCal[]" /> Muy Malas &nbsp;&nbsp;&nbsp;
-					&nbsp;<input type="radio" name="ProCal" value="M" id="ProCal[]" /> Malas &nbsp;&nbsp;&nbsp;
-					&nbsp;<input type="radio" name="ProCal" value="R" id="ProCal[]" /> Regular &nbsp;&nbsp;&nbsp;
-					&nbsp;<input type="radio" name="ProCal" value="B" id="ProCal[]" /> Buenas &nbsp;&nbsp;&nbsp;
-					&nbsp;<input type="radio" name="ProCal" value="MB" id="ProCal[]" /> Muy Buenas &nbsp;&nbsp;&nbsp;
-				</td>
-			</tr>
-			<tr height="55">
-				<td>&nbsp;&nbsp;7.- ¿Que seccion de nuestra pagina te llamo mas la atencion? (Pueden ser varias)</td>
-				<td>
-					&nbsp;<input type="checkbox" name="Aten" value="Ind" id="Aten[]" /> La Pagina Principal &nbsp;&nbsp;
-					&nbsp;<input type="checkbox" name="Aten" value="Prom" id="Aten[]" /> Las Promociones &nbsp;&nbsp;
-					&nbsp;<input type="checkbox" name="Aten" value="Prod" id="Aten[]" /> Los Productos &nbsp;&nbsp;
-					&nbsp;<input type="checkbox" name="Aten" value="Herr" id="Aten[]" /> Las Herramientas &nbsp;&nbsp;
-					&nbsp;<input type="checkbox" name="Aten" value="Cont" id="Aten[]" /> Contactenos &nbsp;&nbsp;
-					&nbsp;<input type="checkbox" name="Aten" value="Enc" id="Aten[]" /> La Encuesta &nbsp;&nbsp;
-					&nbsp;<input type="checkbox" name="Aten" value="Tar" id="Aten[]" /> Tareas anteriores &nbsp;&nbsp;
-					&nbsp;<input type="checkbox" name="Aten" value="Nin" id="Aten[]" /> Ninguna &nbsp;&nbsp;
-				</td>
-			</tr>
-			<tr height="55">
-				<td>&nbsp;&nbsp;8.- ¿Encontraste el producto que buscabas?</td>
-				<td>
-					&nbsp;<input type="radio" name="Produ" value="S" id="Produ[]" /> Si &nbsp;&nbsp;&nbsp;
-					&nbsp;<input type="radio" name="Produ" value="SP" id="Produ[]" /> Si, pero de otra marca &nbsp;&nbsp;&nbsp;
-					&nbsp;<input type="radio" name="Produ" value="N" id="Produ[]" /> No 
-				</td>
-			</tr>
-			<tr height="55">
-				<td>&nbsp;&nbsp;9.- ¿Que tipo de categoria de productos te llamo mas la atencion?</td>
-				<td>
-					&nbsp;<select name="Sel_Prod">
-						<option value="0">Seleccione...</option>
-						<option value="1">Ninguno</option>
-				</td>
-			</tr>
-			<tr height="55">
-				<td>&nbsp;&nbsp;10.- ¿Fue facil para ti navegar en la seccion de productos?</td>
-				<td>
-					&nbsp;<input type="radio" name="ProDif" value="PB" id="ProDif[]" /> Si, bastante &nbsp;&nbsp;&nbsp;
-					&nbsp;<input type="radio" name="ProDif" value="PUP" id="ProDif[]" /> Si, un poco &nbsp;&nbsp;&nbsp;
-					&nbsp;<input type="radio" name="ProDif" value="N" id="ProDif[]" /> No, para nada &nbsp;&nbsp;&nbsp;
-=======
 	                              <?php 
 	                                  include 'conexion.php';
 	                                  $consulta = "SELECT * FROM categorias";
 	                                  $ejecutar = mysqli_query($conexion, $consulta) or die(mysqli_error($conexion));
 	                              ?>
->>>>>>> 25704798a1df9494f1cd204830387ac4c7d8f7ec
+
 
 	                              <?php foreach ($ejecutar as $opciones): ?>
 

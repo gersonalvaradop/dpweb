@@ -53,9 +53,9 @@
 <script src="./assets/js/jquery.sticky.js"></script>
 
 <!-- contact js -->
-<script src="./assets/js/contact.js"></script>
+<!--<script src="./assets/js/contact.js"></script>-->
 <script src="./assets/js/jquery.form.js"></script>
-<script src="./assets/js/jquery.validate.min.js"></script>
+<!<script src="./assets/js/jquery.validate.min.js"></script>
 <script src="./assets/js/mail-script.js"></script>
 <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
 

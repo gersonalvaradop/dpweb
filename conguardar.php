@@ -11,10 +11,9 @@ $query = "INSERT INTO contacto(nombre,email,asunto,mensaje)values ('$nombre','$m
 $resultado = $conexion->query($query);
 		if ($resultado) {
 		
-			//header("location: mostrarproduc.php");
+			header("location: contact.php?mensaje=Su mensaje ha sido enviado");
 		}else{
-			echo "Error no se guardo";
-
+			header("location: contact.php?error=Problemas al guardar su mensaje");			
 		}
 
 

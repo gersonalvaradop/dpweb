@@ -20,12 +20,13 @@
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/css/themify-icons.css">
     <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" href="assets/css/sweetalert2.min.css">
     
 
     <!-- JS here -->
     <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/sweetalert2.all.min.js"></script>
 </head>
 
 <body>
