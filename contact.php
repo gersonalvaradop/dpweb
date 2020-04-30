@@ -6,7 +6,7 @@
         <h2 class="contact-title">Contactenos</h2>
         </div>
         <div class="col-lg-8">
-        <form class="form-contact contact_form" id="contactForm" action="contact_process.php" method="post" novalidate="novalidate">
+        <form class="form-contact contact_form" id="contactForm" action="conguardar.php" method="post" novalidate="novalidate">
             <!-- Informacion de contacto -->
             <div class="row">
                 <!-- Nombre -->
@@ -37,9 +37,9 @@
            
             <!-- Boton -->
             <div class="form-group mt-3">
-                <button class="button button-contactForm boxed-btn" type="submit">Contactar</button>
+                <button type="submit" class="button button-contactForm boxed-btn" onclick="ale();">Contactar</button>
             </div>
-            </form>
+        </form>
         </div>
         <div class="col-lg-3 offset-lg-1">
             <div class="media contact-info">
@@ -52,7 +52,7 @@
             <div class="media contact-info">
                 <span class="contact-info__icon"><i class="ti-tablet"></i></span>
                 <div class="media-body">
-                    <h3>+503 22222222</h3>
+                    <h3>+503 22628402</h3>
                     <p>de 6am a 8pm </p>
                 </div>
             </div>
@@ -66,5 +66,10 @@
         </div>
     </div>
 </div>
-
+<script type="text/javascript">
+    function ale(){
+        alert('muy pronto nos pondremos en contacto con tigo');
+    }
+    
+</script>
 <?php include 'pie.php'; ?>
