@@ -1,7 +1,6 @@
 <?php  include ('cabeza.php') ?>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	 <script src="assets/js/pinterest_grid.js"></script>
-	 <script type="stylesheet" src="assets/css/panel.css"></script>
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 <div class="container">
 	<div class="row">

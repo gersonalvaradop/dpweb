@@ -21,7 +21,7 @@
 			</tr>
 			<tr height="55">
 				<td>&nbsp;&nbsp;3.- Selecciona tu genero:</td>
-				<td>
+				<td><br>
 					&nbsp;<input type="radio" name="Sexo" value="M" id="Sexo[]" /> Masculino &nbsp;&nbsp;&nbsp;
 					&nbsp;<input type="radio" name="Sexo" value="F" id="Sexo[]" /> Femenino &nbsp;&nbsp;&nbsp;
 					&nbsp;<input type="radio" name="Sexo" value="N" id="Sexo[]" /> Prefiero no decirlo
