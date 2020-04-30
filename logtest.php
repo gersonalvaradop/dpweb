@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -41,10 +42,11 @@
     </div>
     <!-- Preloader End -->
 
-	<!-- Header Start -->
     <header>
+        <!-- Header Start -->
         <div class="header-area">
             <div class="main-header ">
+
                 <div class="header-bottom  header-sticky">
                     <div class="container-fluid">
                         <div class="row align-items-center">
@@ -54,7 +56,6 @@
                                   <a href="index.php"><img src="assets/img/logo/logon.png" alt=""></a>
                                 </div>
                             </div>
-                            <!-- Logo -->
                             <div class="col-xl-6 col-lg-8 col-md-7 col-sm-5">
                                 <!-- Main-menu -->
                                 <div class="main-menu f-right d-none d-lg-block">
@@ -73,6 +74,8 @@
                                                      <li><a href="oldproyect/internet.html">Internet de las cosas</a> </li>
                                                      <li><a href="oldproyect/info.html">Informacion del grupo</a> </li>
                                                      <li><a href="oldproyect/glosario.html">Glosario</a> </li> 
+                                                </ul>
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -80,10 +83,13 @@
                             <div class="col-xl-5 col-lg-3 col-md-3 col-sm-3 fix-card">
                                 <ul class="header-right f-right d-none d-lg-block d-flex justify-content-between">
                                     <li class="d-none d-xl-block">
-                                        <div>
-                                        	<a href="index.php"><button type="button" class="btn btn-danger">Atras</button></a>
+                                    </li>
+                                    <li>
+                                        <div class="shopping-card">
+                                        <a href="#"><i class="fas fa-shopping-cart"></i></a>
                                         </div>
                                     </li>
+                                    <li class="d-none d-lg-block"> <a href="index.php" class="btn-sm btn-warning">Atras</a></li>
                                 </ul>
                             </div>
                             <!-- Mobile Menu -->
@@ -98,71 +104,10 @@
     </header>
     <!-- Header End -->
 
-	<section>
-		<div class="container">
-			<form>
-				<div class="row align-items-center">
-					<div style="text-align: center;">
-						<!-- Titulo -->
-						<h1>JARDINERIA DPWEB</h1><br>
-						<!-- Imagen -->
-						<br>
-						<img src="https://static.vecteezy.com/system/resources/previews/000/585/414/non_2x/vector-leaf-green-nature-logo-and-symbol-template.jpg" style="width: 250px;" alt="">
-						<br>
-						<!-- Leyenda -->
-						<h3> Inicio de sesión<br>Ingresa tus datos </h3>
-						<br>
-						<!-- Formulario -->
-						<form name="login" id="login" action="#" method="post" >
-
-						</form>
-
-						<div class="col-lg-6">
-						</div>
-					</div>
-				</div>
-			</form>
-		</div>
+<main>
 
 
-								<div class="col-md-3">
-								</div>
-								<div class="col-md-6 form-group">
-									<input required type="text" class="form-control valid" id="usuario" name="usuario" value="" placeholder="Usuario">
-								</div>
-								<div class="col-md-3">
-								</div>
-
-								<div class="col-md-12">
-								</div>
-
-								<div class="col-md-3">
-								</div>
-								<div class="col-md-6 form-group p_star">
-									<input required="" type="password" class="form-control" id="password" name="password" value="" placeholder="Password">
-								</div>
-								<div class="col-md-3">
-								</div>
-
-								<div class="col-md-12">
-									<label> </label>
-								</div>
-
-								<div class="col-md-12 form-group" align="center">
-									<button type="submit" class="btn btn-sucess" value="submit" class="btn-sm btn-primary">
-										Iniciar sesión
-									</button>
-									<br />
-									<br />
-									<a class="lost_pass" style="color: blue;" href="#">Olvide mi password</a>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-    
+<!--Survey js here-->
+<script src="assets/js/ValSur.js"></script>
 
 <?php include 'pie.php'; ?>

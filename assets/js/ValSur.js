@@ -27,49 +27,29 @@ function ValidSurvey() {
         alert("La pregunta 6 debe ser completada.");
         return false;
     }
-    if (! ValidateOneCheck(FrmEnc.Aten) )
-    {
-        alert("Necesita checkear al menos una seccion en la pregunta 7.");
-        return false;
-    }
     if (! ValidateOneCheck(FrmEnc.Produ) )
     {
-        alert("Es necesario seleccionar una respuesta en la pregunta 8.");
-        return false;
-    }
-    if (FrmEnc.Sel_Prod.value == 0) {
-        alert("Es necesario seleccionar un producto en la pregunta 9.");
+        alert("Es necesario seleccionar una respuesta en la pregunta 7.");
         return false;
     }
     if (! ValidateOneCheck(FrmEnc.ProDif) )
     {
-        alert("Gustariamos saber tu opinion sobre la dificultad para navegar en la seccion productos, pregunta 10.");
+        alert("Gustariamos saber tu opinion sobre la dificultad para navegar en la seccion productos, pregunta 9.");
         return false;
     }
     if (FrmEnc.Sel_Pre.value == 0) {
-        alert("La pregunta 11 necesita ser completada.");
+        alert("La pregunta 10 necesita ser completada.");
         return false;
     }
     if (FrmEnc.Visita.value == 0) {
-        alert("Es importante saber que tan seguido visitas nuestra pagina, responde la pregunta 12.");
+        alert("Es importante saber que tan seguido visitas nuestra pagina, responde la pregunta 11.");
         return false;
     }
     if (! ValidateOneCheck(FrmEnc.Recom) )
     {
-        alert("Es necesario seleccionar una respuesta en la pregunta 13.");
+        alert("Es necesario seleccionar una respuesta en la pregunta 12.");
         return false;
     }
-    if (! ValidateOneCheck(FrmEnc.ChPag) )
-    {
-        alert("Es necesario seleccionar una respuesta en la pregunta 13.");
-        return false;
-    }
-    if(IsEmptyField(FrmEnc.comments.value))
-    {
-        alert("Si no cambiarias nada o si no prefieres decirnos que cambiar, puedes escribir N/A en el campo de la pregunta 14.");
-        return false;
-    }
-
     if(IsEmptyField(FrmEnc.Ext_com.value))
     {
         alert("Digite el comentario extra, si no tienes puedes digitar N/A");
@@ -121,4 +101,25 @@ function ValidateOneCheck(theSelector)
 		}
 	}
 	return Seleccionado;
+}
+
+// Para validar solo numeros en el textbox
+function solonumeros(e) {
+ 
+    var key;
+ 
+    if (window.event) // IE
+    {
+        key = e.keyCode;
+    }
+    else if (e.which) // Netscape/Firefox/Opera
+    {
+        key = e.which;
+    }
+ 
+    if (key < 48 || key > 57) {
+        return false;
+    }
+ 
+    return true;
 }

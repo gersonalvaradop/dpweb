@@ -2,10 +2,10 @@
 -- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 19-04-2020 a las 20:39:28
--- Versión del servidor: 10.4.11-MariaDB
--- Versión de PHP: 7.4.1
+-- Host: 127.0.0.1
+-- Generation Time: Apr 20, 2020 at 08:02 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `jardineria`
+-- Database: `jardineria`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `categorias`
+-- Table structure for table `categorias`
 --
 
 CREATE TABLE `categorias` (
@@ -36,7 +36,7 @@ CREATE TABLE `categorias` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `categorias`
+-- Dumping data for table `categorias`
 --
 
 INSERT INTO `categorias` (`id`, `nombre`, `activo`, `orden`) VALUES
@@ -48,7 +48,7 @@ INSERT INTO `categorias` (`id`, `nombre`, `activo`, `orden`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `departamentos`
+-- Table structure for table `departamentos`
 --
 
 CREATE TABLE `departamentos` (
@@ -57,7 +57,7 @@ CREATE TABLE `departamentos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `departamentos`
+-- Dumping data for table `departamentos`
 --
 
 INSERT INTO `departamentos` (`cod_dpto`, `nom_dpto`) VALUES
@@ -79,7 +79,30 @@ INSERT INTO `departamentos` (`cod_dpto`, `nom_dpto`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `municipios`
+-- Table structure for table `encuestas`
+--
+
+CREATE TABLE `encuestas` (
+  `ID_encuesta` int(4) NOT NULL,
+  `EncNombre` varchar(20) NOT NULL,
+  `EncApellido` varchar(20) NOT NULL,
+  `EncGenero` varchar(15) NOT NULL,
+  `EncPais` varchar(20) NOT NULL,
+  `EncSat` varchar(15) NOT NULL,
+  `EncMarcaProd` varchar(15) NOT NULL,
+  `EncFindProd` varchar(25) NOT NULL,
+  `EncCateg` varchar(20) NOT NULL,
+  `EncEasy` varchar(15) NOT NULL,
+  `EncPrecio` varchar(30) NOT NULL,
+  `EncVisita` varchar(30) NOT NULL,
+  `EncRecom` varchar(6) NOT NULL,
+  `ExtraComment` varchar(150) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `municipios`
 --
 
 CREATE TABLE `municipios` (
@@ -89,7 +112,7 @@ CREATE TABLE `municipios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `municipios`
+-- Dumping data for table `municipios`
 --
 
 INSERT INTO `municipios` (`cod_mun`, `cod_dpto`, `nom_mun`) VALUES
@@ -359,7 +382,7 @@ INSERT INTO `municipios` (`cod_mun`, `cod_dpto`, `nom_mun`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `producto`
+-- Table structure for table `producto`
 --
 
 CREATE TABLE `producto` (
@@ -374,7 +397,7 @@ CREATE TABLE `producto` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
--- Volcado de datos para la tabla `producto`
+-- Dumping data for table `producto`
 --
 
 INSERT INTO `producto` (`id`, `nombre`, `precio`, `cantidad`, `provedor`, `imagen`, `descripcion`, `categoria`) VALUES
@@ -404,7 +427,7 @@ INSERT INTO `producto` (`id`, `nombre`, `precio`, `cantidad`, `provedor`, `image
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuarios`
+-- Table structure for table `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -419,7 +442,7 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `usuarios`
+-- Dumping data for table `usuarios`
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `usuario`, `password`, `correo`, `telefono`, `rol`, `registrado`) VALUES
@@ -427,80 +450,92 @@ INSERT INTO `usuarios` (`id`, `nombre`, `usuario`, `password`, `correo`, `telefo
 (2, 'Yamir', 'ynovosky', 'b1adc6c3dfffb991b51dccea24eb24ef', 'ynovosky@jardin.com', '1111112321', '2', '2020-04-09 22:16:16');
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `categorias`
+-- Indexes for table `categorias`
 --
 ALTER TABLE `categorias`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `departamentos`
+-- Indexes for table `departamentos`
 --
 ALTER TABLE `departamentos`
   ADD PRIMARY KEY (`cod_dpto`);
 
 --
--- Indices de la tabla `municipios`
+-- Indexes for table `encuestas`
+--
+ALTER TABLE `encuestas`
+  ADD PRIMARY KEY (`ID_encuesta`);
+
+--
+-- Indexes for table `municipios`
 --
 ALTER TABLE `municipios`
   ADD PRIMARY KEY (`cod_mun`),
   ADD KEY `cod_dpto` (`cod_dpto`);
 
 --
--- Indices de la tabla `producto`
+-- Indexes for table `producto`
 --
 ALTER TABLE `producto`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `usuarios`
+-- Indexes for table `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `categorias`
+-- AUTO_INCREMENT for table `categorias`
 --
 ALTER TABLE `categorias`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT de la tabla `departamentos`
+-- AUTO_INCREMENT for table `departamentos`
 --
 ALTER TABLE `departamentos`
   MODIFY `cod_dpto` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT de la tabla `municipios`
+-- AUTO_INCREMENT for table `encuestas`
+--
+ALTER TABLE `encuestas`
+  MODIFY `ID_encuesta` int(4) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `municipios`
 --
 ALTER TABLE `municipios`
   MODIFY `cod_mun` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=263;
 
 --
--- AUTO_INCREMENT de la tabla `producto`
+-- AUTO_INCREMENT for table `producto`
 --
 ALTER TABLE `producto`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
 
 --
--- AUTO_INCREMENT de la tabla `usuarios`
+-- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- Restricciones para tablas volcadas
+-- Constraints for dumped tables
 --
 
 --
--- Filtros para la tabla `municipios`
+-- Constraints for table `municipios`
 --
 ALTER TABLE `municipios`
   ADD CONSTRAINT `municipios_ibfk_1` FOREIGN KEY (`cod_dpto`) REFERENCES `departamentos` (`cod_dpto`);

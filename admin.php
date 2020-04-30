@@ -1,5 +1,5 @@
 <?php 
-include 'mysql.php';
+
 include 'head_admins.php';
 ?>
 
