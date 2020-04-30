@@ -144,6 +144,12 @@ if ($_SESSION['rol']!=1) {
 							<span>Inicio</span>
 						</a>
 					</li>
+					<li class="">
+						<a href="esquemadb.php">
+							<i class="material-icons">storage</i>
+							<span>DiagramaDB</span>
+						</a>
+					</li>
 
 					<li>
 						<a href="javascript:void(0);" class="menu-toggle">
@@ -152,7 +158,7 @@ if ($_SESSION['rol']!=1) {
 						</a>
 						<ul class="ml-menu">
 							<li>
-								<a href="javascript:void(0);">
+								<a href="detalle_usuario.php">
 									<span>Detalles</span>
 								</a>
 							</li>
