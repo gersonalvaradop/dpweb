@@ -58,7 +58,7 @@ CREATE TABLE `contacto` (
   `asunto` varchar(50) COLLATE utf8mb4_spanish2_ci NOT NULL,
   `mensaje` varchar(100) COLLATE utf8mb4_spanish2_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish2_ci;
-
+ 
 -- --------------------------------------------------------
 
 --

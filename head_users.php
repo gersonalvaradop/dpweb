@@ -19,11 +19,13 @@
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/css/themify-icons.css">
     <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
+
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" href="assets/css/sweetalert2.min.css">
 
     <!-- JS here -->
     <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+     <script src="./assets/js/sweetalert2.all.min.js"></script>
 </head>
 
 <body>
@@ -58,12 +60,13 @@
                             <div class="col-xl-6 col-lg-8 col-md-7 col-sm-5">
                                 <!-- Main-menu -->
                                 <div class="main-menu f-right d-none d-lg-block">
-                                    <nav>                                                
+                                    <nav style="">                                                
                                         <ul id="navigation">                          
                                             <li><a href="index.php">Inicio</a></li>
-                                            <li><a href="#">Catalogo de productos</a>
+                                            <li><a href="productos.php">Catalogo de prod.</a>
                                             </li>
-                                            <li><a href="encuesta.php">Llenar encuesta</a></li>
+                                            <li><a href="encuesta.php">Encuesta</a></li>
+                                            <li><a href="contact.php">Contacto</a></li>
                                             <li><a href="#">Menús Antiguos</a>
                                                 <ul class="submenu">
                                                      <li><a href="oldproyect/historia.html">Historia del sitio</a> </li>
@@ -97,7 +100,7 @@
                                     <li>
                                        
                                     </li>
-                                    <li class="d-none d-lg-block"> <a href="login.php" class="btn-outline-secondary btn-sm">Cerrar sesión</a></li>                                                      
+                                    <li class="d-none d-lg-block"> <a href="logout.php" class="btn-outline-secondary btn-sm">Cerrar sesión</a></li>                                                      
                                 </ul>
                             </div>
                             <!-- Mobile Menu -->

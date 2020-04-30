@@ -1,4 +1,11 @@
-<?php if (session_status() !== PHP_SESSION_ACTIVE) {session_start();} ?>
+<?php session_start();
+header("Content-Type: text/html;charset=utf-8");
+if (isset($_SESSION['usuario'])) {
+    include 'head_users.php';
+}else{?>
+
+
+<?php //if (session_status() !== PHP_SESSION_ACTIVE) {session_start();} ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -121,3 +128,5 @@
     </header>
     <!-- Header End -->
 <main>
+
+    <?php } ?>
