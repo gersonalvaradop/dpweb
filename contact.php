@@ -6,13 +6,13 @@
         <h2 class="contact-title">Contactenos</h2>
         </div>
         <div class="col-lg-8">
-        <form class="form-contact contact_form" id="contactForm" action="conguardar.php" method="post" novalidate="novalidate">
+        <form class="form-contact contact_form" id="contactForm" action="conguardar.php" method="post"  enctype="multipart/form-data">
             <!-- Informacion de contacto -->
             <div class="row">
                 <!-- Nombre -->
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <input name="name" class="form-control valid" id="name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ingrese su nombre'" type="text" placeholder="Ingrese su nombre">
+                        <input type="text" name="Nombre" class="form-control valid" id="Nombre" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ingrese su nombre'" placeholder="Ingrese su nombre">
                     </div>
                 </div>
                 <!-- Correo -->
@@ -24,23 +24,24 @@
                 <!-- Asunto -->
                 <div class="col-12">
                     <div class="form-group">
-                        <input name="subject" class="form-control" id="subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Asunto'" type="text" placeholder="Asunto">
+                        <input name="Asunto" class="form-control" id="subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Asunto'" type="text" placeholder="Asunto">
                     </div>
                 </div>
                  <!-- Mensaje -->
                 <div class="col-12">
                     <div class="form-group">
-                        <textarea name="message" class="form-control w-100" id="message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ingrese el mensaje'" placeholder=" Ingrese su mensaje" rows="9" cols="30"></textarea>
+                        <textarea name="Msj" class="form-control w-100" id="Msj" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ingrese el mensaje'" placeholder=" Ingrese su mensaje" rows="9" cols="30"></textarea>
                     </div>
+
                 </div>
             </div>
-           
-            <!-- Boton -->
-            <div class="form-group mt-3">
-                <button type="submit" class="button button-contactForm boxed-btn" onclick="ale();">Contactar</button>
+               <div class="form-group mt-3">
+               <button type="submit" name="btn" value="Guardar" class="btn btn-succes" heigth="50"  onclick="ale();">Guardar<i class="fas fa-save"></i></button>
             </div>
         </form>
         </div>
+
+        
         <div class="col-lg-3 offset-lg-1">
             <div class="media contact-info">
                 <span class="contact-info__icon"><i class="ti-home"></i></span>
