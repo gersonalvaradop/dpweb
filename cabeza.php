@@ -101,7 +101,7 @@ if (isset($_SESSION['usuario'])) {
                                     </li>
                                     <li>
                                         <div class="shopping-card">
-                                        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                                        <a href="vercarrito.php"><i class="fas fa-shopping-cart"></i></a>
                                         </div>
                                     </li>
                                     <li>

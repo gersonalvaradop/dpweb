@@ -1,4 +1,9 @@
 <?php  include ('cabeza.php') ?>
+<?php
+//Forma contractada del IF se usa cuando las intrucciones son UNA SOLA en ambas respuestas
+if(isset($_SESSION['carro']))
+    $carro=$_SESSION['carro'];else $carro=false;
+?>
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="assets/js/pinterest_grid.js"></script>
@@ -20,17 +25,42 @@
 					  <a href="#" class="btn-lg btn-success btn-block"> PRECIO: $ <?php echo $row['precio']; ?></a><br>
 					  	 <div class="row">
 					        <div class="col-lg-6">
-					        	<a href="#" class="btn-lg btn-warning btn-block">Comprar</a>
+					        	<div class="col-lg-6" align="right">
+
+	<?php
+		if(!$carro || !isset($carro[md5($row['id'])]['identificador']) || $carro[md5($row['id'])]['identificador']!=md5($row['id'])) {
+              echo '<a 	title="Comprar" href="addcarrito.php?id='.$row['id'].'" onclick="a();"><img src="img/add.png" width="200" height="75"  align="center"> </a><br>'; 
+               
+            }else{
+                //Si el producto YA esta en el carrito
+                echo    '<a  title="Eliminar"   href="borrarcarrito.php?id='.$row['id'].'" onclick="e();"><img src="img/eli.png" width="200" height="75" align="center"></a>' ;
+        }
+    ?>
+					         	
 					        </div>
-					        <div class="col-lg-6" align="right">
-					        	<a href="#" class="btn-lg btn-danger btn-block" style="font-size: 16px;">No me gusta</a>
-					        </div>
+					         </div>
+					       
 					    </div>
 					  </div>
 					</div>
 				</div>
-			<?php } ?>	
+			<?php } ?>
+
 	</div>
 </div>
+
+<script type="text/javascript">
+	
+	function a(){
+
+		alert('Producto agregado a carrito');
+	}
+
+	function e(){
+
+		alert("Producto  Eliminado de Carrito");
+	}
+</script>
+
 
 <?php include 'pie.php'; ?>

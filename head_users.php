@@ -93,9 +93,7 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="shopping-card">
-                                        <a href="#"><i class="fas fa-shopping-cart"></i></a>
-                                        </div>    
+                                           
                                     </li>
                                     <li>
                                        
