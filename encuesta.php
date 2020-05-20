@@ -1,5 +1,6 @@
 <?php include ('cabeza.php') ?>
 <link rel="stylesheet" href="assets/css/nice-select.css">
+
 <div class="container">
 	<div class="form">
 		<!--Survey form start-->

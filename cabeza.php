@@ -1,11 +1,13 @@
 <?php session_start();
+
 header("Content-Type: text/html;charset=utf-8");
 if (isset($_SESSION['usuario'])) {
     include 'head_users.php';
 }else{?>
 
 
-<?php //if (session_status() !== PHP_SESSION_ACTIVE) {session_start();} ?>
+
+<?php if (session_status() !== PHP_SESSION_ACTIVE) {session_start();} ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -15,11 +17,14 @@ if (isset($_SESSION['usuario'])) {
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+ 
+
+   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/flaticon.css">
     <link rel="stylesheet" href="assets/css/slicknav.css">
     <link rel="stylesheet" href="assets/css/animate.min.css">
@@ -87,22 +92,15 @@ if (isset($_SESSION['usuario'])) {
                                             </li>
                                         </ul>
                                     </nav>
-                                </div>
+                                </div> 
                             </div> 
                             <div class="col-xl-5 col-lg-3 col-md-3 col-sm-3 fix-card">
                                 <ul class="header-right f-right d-none d-lg-block d-flex justify-content-between">
-                                    <li class="d-none d-xl-block">
-                                        <div class="form-box f-right ">
-                                            <input type="text" name="Search" placeholder="¿Buscas algo?">
-                                            <div class="search-icon">
-                                                <i class="fas fa-search special-tag"></i>
-                                            </div>
-                                        </div>
+                                    <li >
+                                        <a href="login.php"><img src="img\C.png" height="70" width="180"></a>
                                     </li>
                                     <li>
-                                        <div class="shopping-card">
-                                        <a href="vercarrito.php"><i class="fas fa-shopping-cart"></i></a>
-                                        </div>
+                                        
                                     </li>
                                     <li>
                                         <div style="margin-top: 12px;">

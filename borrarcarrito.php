@@ -7,5 +7,10 @@ extract($_REQUEST);
 
 
 $_SESSION['carro']= $carro;
-header("location:productos.php");
+//header("location:productos.php");
+  if($acc=='v'){
+  	header("location:vercarrito.php");
+  }else{
+  	header("location:productos.php");
+  }
   ?>

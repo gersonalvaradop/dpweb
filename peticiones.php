@@ -18,6 +18,7 @@ $_POST  = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 if (isset($_POST['login_peticion'])) {
 	$usuario = $_POST['usuario'];
 	$password = $_POST['password'];
+	
 	$r = q("select * from usuarios where usuario = '".$usuario."'");
 	
 	

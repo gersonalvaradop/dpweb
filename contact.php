@@ -1,5 +1,5 @@
 <?php include 'cabeza.php'; ?>
-
+<script src="./assets/js/main.js"></script>
 <div class="container">
     <div class="row">
         <div class="col-12">

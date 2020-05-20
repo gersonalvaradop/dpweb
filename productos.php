@@ -7,6 +7,7 @@ if(isset($_SESSION['carro']))
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="assets/js/pinterest_grid.js"></script>
+	<script src="./assets/js/main.js"></script>
 
 <div class="container">
 	<div class="row">

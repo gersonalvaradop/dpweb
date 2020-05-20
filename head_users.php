@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <script src="./assets/js/main.js"></script>
 
     <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -59,11 +60,11 @@
                             </div>
                             <div class="col-xl-6 col-lg-8 col-md-7 col-sm-5">
                                 <!-- Main-menu -->
-                                <div class="main-menu f-right d-none d-lg-block">
-                                    <nav style="">                                                
+                                <div class="main-menu f-right d-none d-lg-block" align="center">
+                                    <nav >                                                
                                         <ul id="navigation">                          
                                             <li><a href="index.php">Inicio</a></li>
-                                            <li><a href="productos.php">Catalogo de prod.</a>
+                                            <li><a href="productos.php">Productos</a>
                                             </li>
                                             <li><a href="encuesta.php">Encuesta</a></li>
                                             <li><a href="contact.php">Contacto</a></li>
@@ -89,11 +90,13 @@
                                             <input type="text" name="Search" placeholder="¿Buscas algo?">
                                             <div class="search-icon">
                                                 <i class="fas fa-search special-tag"></i>
-                                            </div>
+                                            </div>                                            
                                         </div>
                                     </li>
                                     <li>
-                                           
+                                       <div class="shopping-card">
+                                        <a href="vercarrito.php"><i class="fas fa-shopping-cart"></i></a>
+                                        </div>    
                                     </li>
                                     <li>
                                        

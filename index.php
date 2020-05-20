@@ -713,6 +713,7 @@ include 'cabeza.php';
         </div>
     </section>
     <!-- Latest Products End -->
+    
 <script>
     
 <?php 
