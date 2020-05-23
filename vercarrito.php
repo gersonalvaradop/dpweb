@@ -122,14 +122,14 @@ if(isset($_SESSION['carro']))
 </tr>
 <tr>
 <td bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" >
-<span class="no-style-override-12a"><b>Numero : </b></span>
+<span class="no-style-override-12a"  ><b>Numero : </b></span>
 </td>
 <td bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" width="73%">
-<input type="text" name="numero" id="numero" size="20" maxlength="16" autocomplete="off"></td><br>
+<input type="text" name="numero" id="numero" size="20" maxlength="16" autocomplete="off"  ></td><br>
 </tr>
 <tr>
 <td bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" >
-<span class="no-style-override-12a"><br><b>Tipo : </b></span>
+<span class="no-style-override-12a"><br><p>Tipo : </p></span>
 </td>
 <td bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" width="73%" >
 <select  name="tipo" >
@@ -141,9 +141,9 @@ if(isset($_SESSION['carro']))
 </tr>
 <tr>
 <td bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" >
-<span class="no-style-override-12a"><b>Fecha Vencimiento : </b></span>
+<span class="no-style-override-12a"><p>Fecha Vencimiento : </p></span>
 </td>
-<td bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" width="73%">
+<td bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" >
 <select size="1" name="mesv" >
 <option>01</option>
 <option>02</option>
@@ -157,7 +157,7 @@ if(isset($_SESSION['carro']))
 <option>10</option>
 <option>11</option>
 <option>12</option>
-</select>/
+</select> //
 <select size="1" name="aniov">
 <option><?php echo date('Y');?></option>
 <?php
@@ -217,7 +217,9 @@ echo '<option>'.$anio.'</option>';
 		$('#modal_editar').modal();
 	}	
 
-	
+	   function valtarjeta(){
+
+       }
 </script>
 
     <?php
@@ -225,6 +227,8 @@ echo '<option>'.$anio.'</option>';
         echo 'No hay productos en el carrito de compras<br>
         <a type="button" href="productos.php"><img src="img/continuar.png"></a>';
 
+        
+        
         
     }
     ?>

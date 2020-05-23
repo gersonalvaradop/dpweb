@@ -15,7 +15,7 @@ estado, nombretc, numerotc, bancotc, tipotc, mestc, aniotc) values ('$id','$fech
 
 $compra=mysqli_query($conexion,$sql);
 $idcompra=mysqli_insert_id($conexion); //Devuelve el ultimo PK autoincremental; sino existe PK AI devolvera 0
-mysqli_close($conexion);
+//mysqli_close($conexion);
 if($idcompra>0)
 {
     //Guardar los items o productos
@@ -26,7 +26,7 @@ if($idcompra>0)
         $nomproducto=$items['nombre'];
         $precio=$items['precio'];
         $cantidad=$items['cantidad'];
-        $sqlitem="insert into detallecompra (idcompra,nombre,precio,cantidad)
+        $sqlitem="insert into detallecompra (idcompra,producto,precio,cantidad)
         values ($idcompra,'$nomproducto',$precio,$cantidad)";
         //echo $sqlitem;
         $producto=mysqli_query($conexion,$sqlitem);
@@ -36,10 +36,12 @@ if($idcompra>0)
     //Esta linea borra el contenido del carrito
     $carro=false; //unset($carro);
     $_SESSION['carro']=$carro;
+
+    //include('cabeza.php');
     echo '<div align="center"><span class="prod">
     Compra procesada con exito...</span>';
     echo '<br><a href="productos.php">Volver al Catalogo</a></div>';
-    echo '<div align="center"><a href="imprimircompra.php?idc='.$idcompra.'">Imprimir Compra</a>';
+    echo '<div align="center"><a href="imprimir.php?idc='.$idcompra.'">Imprimir Compra</a>';
 }
 else
 {

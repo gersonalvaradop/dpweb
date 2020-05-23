@@ -97,7 +97,7 @@ if (isset($_SESSION['usuario'])) {
                             <div class="col-xl-5 col-lg-3 col-md-3 col-sm-3 fix-card">
                                 <ul class="header-right f-right d-none d-lg-block d-flex justify-content-between">
                                     <li >
-                                        <a href="login.php"><img src="img\C.png" height="70" width="180"></a>
+                                        <a href="login.php" onclick="s();"><img src="img\C.png" height="70" width="180"></a>
                                     </li>
                                     <li>
                                         
@@ -124,6 +124,12 @@ if (isset($_SESSION['usuario'])) {
             </div>
         </div>
     </header>
+    <script type="text/javascript">
+        function s(){
+
+            alert('Debe iniciar sesión para poder comprar');
+        }
+    </script>
     <!-- Header End -->
 <main>
 

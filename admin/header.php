@@ -173,6 +173,11 @@ if ($_SESSION['rol']!=1) {
 									<span>Productos</span>
 								</a>
 							</li>
+							<li>
+								<a href="reporte_compras.php">
+									<span>compras</span>
+								</a>
+							</li>
 						</ul>
 					</li>
 					<li class="">

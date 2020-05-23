@@ -68,6 +68,7 @@
                                             </li>
                                             <li><a href="encuesta.php">Encuesta</a></li>
                                             <li><a href="contact.php">Contacto</a></li>
+                                            <li><a href="historial.php">Historial</a></li>
                                             <li><a href="#">Menús Antiguos</a>
                                                 <ul class="submenu">
                                                      <li><a href="oldproyect/historia.html">Historia del sitio</a> </li>
